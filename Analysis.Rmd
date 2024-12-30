@@ -1307,7 +1307,7 @@ ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
         legend.direction = "vertical", 
         legend.background = element_rect(color = "black"))
 
-ggsave(file = "figures/Crossing_CO2accumulationRate.png", width = 5, height = 5, 
+ggsave(file = "figures/Figure_S2.png", width = 5, height = 5, 
        dpi = 300, units = "in")
 ```
 
@@ -1362,7 +1362,7 @@ ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
         legend.direction = "vertical", 
         legend.background = element_rect(color = "black"))
 
-ggsave(file = "figures/Crossing_CO2accumulation.png", width = 5, height = 5, 
+ggsave(file = "figures/Figure_S3.png", width = 5, height = 5, 
        dpi = 300, units = "in")
 ```
 
@@ -1418,7 +1418,7 @@ ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
         legend.direction = "vertical", 
         legend.background = element_rect(color = "black"))
 
-ggsave(file = "figures/Crossing_Cbiodegradability.png", width =5, height = 5, 
+ggsave(file = "figures/Figure_S4.png", width =5, height = 5, 
        dpi = 300, units = "in")
 ```
 
