@@ -33,154 +33,6 @@ library(kableExtra)
 
 # Main manuscript
 
-```{r stats, eval = FALSE}
-# Filter to 1, 3, 7, 10 days
-biodegrad_crossing_filt <- 
-  biodegrad_crossing_interp %>%
-  filter(Time_d %in% c(1, 3, 7, 10) &
-           Enrichment != "CTRL\nmicrobes") 
-# Summary statistics ###########################################################
-# Mean biodegradability, removal rate for treatments through time
-biodegrad_crossing_filt %>%
-  ungroup() %>% group_by(DOMSource, Time_hrs) %>%
-  summarise(biodegrad_perc = mean(biodegrad_perc, na.rm = TRUE),
-            k_C_d = mean(k_C_d, na.rm = TRUE))
-
-# Mean change in DOC
-deltaDOC %>% 
-  group_by(DOMSource, Enrichment) %>%
-  arrange(DOMSource, Enrichment) %>%
-  summarise_if(is.numeric, mean, na.rm = T)
-
-# Maximum co2 accumulation rates
-maxRate <-
-  biodegrad_crossing %>% 
-  ungroup() %>%
-  group_by(DOMSource, Enrichment) %>%
-  summarize(maxCO2Rate_mgCLmin = max(CO2Rate_mgCLmin, na.rm = T))
-
-# Get the mean peak CO2 rates per DOM source
-biodegrad_crossing %>% 
-  ungroup() %>%
-  group_by(DOMSource, Enrichment) %>%
-  summarize(maxCO2Rate_mgCLmin = max(CO2Rate_mgCLmin, na.rm = T)) %>%
-  ungroup() %>%
-  group_by(DOMSource) %>%
-  summarise(mean(maxCO2Rate_mgCLmin))
-
-# Get timing of max rate
-maxTime <-
-  biodegrad_crossing %>% 
-  ungroup() %>%
-  group_by(Experiment, DOMSource, Enrichment, Replicate) %>%
-  filter(CO2Rate_mgCLmin == max(CO2Rate_mgCLmin, na.rm = T))
-sum(maxTime$Time_d < 1)
-length(maxTime$Time_d)
-summary(maxTime$Time_hrs)
-summary(maxTime$CO2Rate_mgCLmin)
-
-mod <- lm(log(CO2Rate_mgCLmin) ~ log(Time_hrs), data = maxTime)
-summary(mod)
-
-# Convert NaNs to NAs before summarizing
-biodegradFilt <- 
-  biodegrad_crossing_interp %>% 
-  filter(Time_hrs %in% c(24, 72, 24*7, 24*10))
-biodegradFilt %>%
-  ungroup() %>%
-  group_by(DOMSource, Time_hrs) %>%
-  summarise(mean(biodegrad_perc, na.rm = TRUE)) %>%
-  arrange(Time_hrs)
-
-# What is determining differences in CO2 accumulation rate?
-kruskal.test(CO2Accum_mgCL ~ Enrichment, data = biodegradFilt)
-kruskal.test(CO2Accum_mgCL ~ DOMSource, data = biodegradFilt)
-
-# Statistical testing ##########################################################
-#install.packages("moments")
-library(moments)
-# delta DOC
-deltaDOC_filt <- deltaDOC %>% filter(Enrichment != "CTRL\nmicrobes")
-# Data: check for normality
-ggplot(data = deltaDOC_filt) +
-  geom_histogram(aes(x = deltaDOC_mgCL), bins = 20) 
-skewness(deltaDOC_filt$deltaDOC_mgCL) # fine
-
-# Run anova
-modl <- aov(deltaDOC_mgCL ~ DOMSource * Enrichment, 
-            data = deltaDOC_filt)
-summary(modl)
-# Avg, sd deltaDOC
-mean(deltaDOC_filt$deltaDOC_perc)
-sd(deltaDOC_filt$deltaDOC_perc)
-deltaDOC_filt %>% 
-  filter(DOMSource == "CHLOR") %>%
-  summarise(mean(deltaDOC_percChange), mean(initial_DOC_mgCL), mean(final_DOC_mgCL))
-deltaDOC_filt %>% 
-  filter(DOMSource == "SRFA" & Enrichment == "SRFA microbes") %>%
-  summarise(mean(deltaDOC_percChange), mean(initial_DOC_mgCL), mean(final_DOC_mgCL))
-
-# co2 accumulation rate
-ggplot(data = biodegrad_crossing_filt) +
-  geom_histogram(aes(x = CO2Rate_mgCLmin)) 
-skewness(biodegrad_crossing_filt$CO2Rate_mgCLmin) # 1.80, positive skew
-ggplot(data = biodegrad_crossing_filt) +
-  geom_histogram(aes(x = log10(CO2Rate_mgCLmin + abs(1.05*min(CO2Rate_mgCLmin))))) 
-biodegrad_crossing_filt$CO2Rate_mgCLmin_log10 <-
-  log10(biodegrad_crossing_filt$CO2Rate_mgCLmin +
-               (abs(1.05 * min(biodegrad_crossing_filt$CO2Rate_mgCLmin))))
-
-skewness(biodegrad_crossing_filt$CO2Rate_mgCLmin_log10) # 0.12
-# run anova
-modl <- aov(CO2Rate_mgCLmin_log10 ~ DOMSource * Enrichment * Time_d, 
-            data = biodegrad_crossing_filt)
-summary(modl)
-
-# co2 accumulation (total)
-ggplot(data = biodegrad_crossing_filt) +
-  geom_histogram(aes(x = CO2Accum_mgCL)) 
-skewness(biodegrad_crossing_filt$CO2Accum_mgCL) # good
-modl <- aov(CO2Accum_mgCL ~ DOMSource * Enrichment * Time_d, 
-            data = biodegrad_crossing_filt)
-summary(modl)
-
-# biodegradability
-ggplot(data = biodegrad_crossing_filt) +
-  geom_histogram(aes(x = biodegrad_perc)) 
-skewness(biodegrad_crossing_filt$biodegrad_perc)
-biodegrad_crossing_filt$biodegrad_perc_log10 <-
-  log10(biodegrad_crossing_filt$biodegrad_perc_log10 +
-          1.1*abs(min(biodegrad_crossing_filt$biodegrad_perc_log10)))
-skewness(biodegrad_crossing_filt$biodegrad_perc_log10)
-modl <- aov(biodegrad_perc_log10 ~ DOMSource * Enrichment * Time_d, 
-            data = biodegrad_crossing_filt)
-summary(modl)
-TukeyHSD(modl)
-modl <- aov(biodegrad_perc_log10 ~ DOMSource * as.factor(Time_d), 
-            data = biodegrad_crossing_filt)
-summary(modl)
-TukeyHSD(modl)
-
-# C removal
-ggplot(data = biodegrad_crossing_filt) +
-  geom_histogram(aes(x = k_C_d)) 
-skewness(biodegrad_crossing_filt$k_C_d)
-biodegrad_crossing_filt$k_C_d_log10 <-
-  log10(biodegrad_crossing_filt$k_C_d +
-          1.1*abs(min(biodegrad_crossing_filt$k_C_d)))
-ggplot(data = biodegrad_crossing_filt) +
-  geom_histogram(aes(x = k_C_d_log10)) 
-skewness(biodegrad_crossing_filt$k_C_d_log10)
-modl <- aov(k_C_d_log10 ~ DOMSource * Enrichment * Time_d, 
-            data = biodegrad_crossing_filt)
-summary(modl)
-TukeyHSD(modl)
-modl <- aov(k_C_d_log10 ~ DOMSource * as.factor(Time_d), 
-            data = biodegrad_crossing_filt)
-summary(modl)
-TukeyHSD(modl)
-```
-
 ## Figure 1
 
 ```{r Fig1, out.width="100%"}
@@ -335,7 +187,7 @@ ggsave(grob, file = "figures/Figure_2.png",
 # Delta DOM ####################################################################
 # Load nutrient analysis data
 nutrient <- 
-  read_csv(file = "data/waterChemistry.csv")
+  read_csv(file = "data/waterChemistry_CrossingExperiment.csv")
 
 # If concentration is less than detection, set to 0
 nutrient$Concentration[nutrient$Concentration == "<LOD"] <- 0
@@ -461,7 +313,7 @@ nut_final_crossing <-
 
 # Biodegradability #############################################################
 # Load gas data
-gas <- read_csv(file =  "data/gasConcentrations.csv")
+gas <- read_csv(file =  "data/gasConcentrations_CrossingExperiment.csv")
 
 # Select crossing experiment data
 gas_crossing <-
@@ -1241,6 +1093,155 @@ ggplot(residuals_k, aes(sample = k_day)) +
 ```{r Fig6, out.width="100%"}
 knitr::include_graphics("images/Figure_6.png")
 ```
+
+```{r stats, eval = FALSE}
+# Filter to 1, 3, 7, 10 days
+biodegrad_crossing_filt <- 
+  biodegrad_crossing_interp %>%
+  filter(Time_d %in% c(1, 3, 7, 10) &
+           Enrichment != "CTRL\nmicrobes") 
+# Summary statistics ###########################################################
+# Mean biodegradability, removal rate for treatments through time
+biodegrad_crossing_filt %>%
+  ungroup() %>% group_by(DOMSource, Time_hrs) %>%
+  summarise(biodegrad_perc = mean(biodegrad_perc, na.rm = TRUE),
+            k_C_d = mean(k_C_d, na.rm = TRUE))
+
+# Mean change in DOC
+deltaDOC %>% 
+  group_by(DOMSource, Enrichment) %>%
+  arrange(DOMSource, Enrichment) %>%
+  summarise_if(is.numeric, mean, na.rm = T)
+
+# Maximum co2 accumulation rates
+maxRate <-
+  biodegrad_crossing %>% 
+  ungroup() %>%
+  group_by(DOMSource, Enrichment) %>%
+  summarize(maxCO2Rate_mgCLmin = max(CO2Rate_mgCLmin, na.rm = T))
+
+# Get the mean peak CO2 rates per DOM source
+biodegrad_crossing %>% 
+  ungroup() %>%
+  group_by(DOMSource, Enrichment) %>%
+  summarize(maxCO2Rate_mgCLmin = max(CO2Rate_mgCLmin, na.rm = T)) %>%
+  ungroup() %>%
+  group_by(DOMSource) %>%
+  summarise(mean(maxCO2Rate_mgCLmin))
+
+# Get timing of max rate
+maxTime <-
+  biodegrad_crossing %>% 
+  ungroup() %>%
+  group_by(Experiment, DOMSource, Enrichment, Replicate) %>%
+  filter(CO2Rate_mgCLmin == max(CO2Rate_mgCLmin, na.rm = T))
+sum(maxTime$Time_d < 1)
+length(maxTime$Time_d)
+summary(maxTime$Time_hrs)
+summary(maxTime$CO2Rate_mgCLmin)
+
+mod <- lm(log(CO2Rate_mgCLmin) ~ log(Time_hrs), data = maxTime)
+summary(mod)
+
+# Convert NaNs to NAs before summarizing
+biodegradFilt <- 
+  biodegrad_crossing_interp %>% 
+  filter(Time_hrs %in% c(24, 72, 24*7, 24*10))
+biodegradFilt %>%
+  ungroup() %>%
+  group_by(DOMSource, Time_hrs) %>%
+  summarise(mean(biodegrad_perc, na.rm = TRUE)) %>%
+  arrange(Time_hrs)
+
+# What is determining differences in CO2 accumulation rate?
+kruskal.test(CO2Accum_mgCL ~ Enrichment, data = biodegradFilt)
+kruskal.test(CO2Accum_mgCL ~ DOMSource, data = biodegradFilt)
+
+# Statistical testing ##########################################################
+#install.packages("moments")
+library(moments)
+# delta DOC
+deltaDOC_filt <- deltaDOC %>% filter(Enrichment != "CTRL\nmicrobes")
+# Data: check for normality
+ggplot(data = deltaDOC_filt) +
+  geom_histogram(aes(x = deltaDOC_mgCL), bins = 20) 
+skewness(deltaDOC_filt$deltaDOC_mgCL) # fine
+
+# Run anova
+modl <- aov(deltaDOC_mgCL ~ DOMSource * Enrichment, 
+            data = deltaDOC_filt)
+summary(modl)
+# Avg, sd deltaDOC
+mean(deltaDOC_filt$deltaDOC_perc)
+sd(deltaDOC_filt$deltaDOC_perc)
+deltaDOC_filt %>% 
+  filter(DOMSource == "CHLOR") %>%
+  summarise(mean(deltaDOC_percChange), mean(initial_DOC_mgCL), mean(final_DOC_mgCL))
+deltaDOC_filt %>% 
+  filter(DOMSource == "SRFA" & Enrichment == "SRFA microbes") %>%
+  summarise(mean(deltaDOC_percChange), mean(initial_DOC_mgCL), mean(final_DOC_mgCL))
+
+# co2 accumulation rate
+ggplot(data = biodegrad_crossing_filt) +
+  geom_histogram(aes(x = CO2Rate_mgCLmin)) 
+skewness(biodegrad_crossing_filt$CO2Rate_mgCLmin) # 1.80, positive skew
+ggplot(data = biodegrad_crossing_filt) +
+  geom_histogram(aes(x = log10(CO2Rate_mgCLmin + abs(1.05*min(CO2Rate_mgCLmin))))) 
+biodegrad_crossing_filt$CO2Rate_mgCLmin_log10 <-
+  log10(biodegrad_crossing_filt$CO2Rate_mgCLmin +
+               (abs(1.05 * min(biodegrad_crossing_filt$CO2Rate_mgCLmin))))
+
+skewness(biodegrad_crossing_filt$CO2Rate_mgCLmin_log10) # 0.12
+# run anova
+modl <- aov(CO2Rate_mgCLmin_log10 ~ DOMSource * Enrichment * Time_d, 
+            data = biodegrad_crossing_filt)
+summary(modl)
+
+# co2 accumulation (total)
+ggplot(data = biodegrad_crossing_filt) +
+  geom_histogram(aes(x = CO2Accum_mgCL)) 
+skewness(biodegrad_crossing_filt$CO2Accum_mgCL) # good
+modl <- aov(CO2Accum_mgCL ~ DOMSource * Enrichment * Time_d, 
+            data = biodegrad_crossing_filt)
+summary(modl)
+
+# biodegradability
+ggplot(data = biodegrad_crossing_filt) +
+  geom_histogram(aes(x = biodegrad_perc)) 
+skewness(biodegrad_crossing_filt$biodegrad_perc)
+biodegrad_crossing_filt$biodegrad_perc_log10 <-
+  log10(biodegrad_crossing_filt$biodegrad_perc_log10 +
+          1.1*abs(min(biodegrad_crossing_filt$biodegrad_perc_log10)))
+skewness(biodegrad_crossing_filt$biodegrad_perc_log10)
+modl <- aov(biodegrad_perc_log10 ~ DOMSource * Enrichment * Time_d, 
+            data = biodegrad_crossing_filt)
+summary(modl)
+TukeyHSD(modl)
+modl <- aov(biodegrad_perc_log10 ~ DOMSource * as.factor(Time_d), 
+            data = biodegrad_crossing_filt)
+summary(modl)
+TukeyHSD(modl)
+
+# C removal
+ggplot(data = biodegrad_crossing_filt) +
+  geom_histogram(aes(x = k_C_d)) 
+skewness(biodegrad_crossing_filt$k_C_d)
+biodegrad_crossing_filt$k_C_d_log10 <-
+  log10(biodegrad_crossing_filt$k_C_d +
+          1.1*abs(min(biodegrad_crossing_filt$k_C_d)))
+ggplot(data = biodegrad_crossing_filt) +
+  geom_histogram(aes(x = k_C_d_log10)) 
+skewness(biodegrad_crossing_filt$k_C_d_log10)
+modl <- aov(k_C_d_log10 ~ DOMSource * Enrichment * Time_d, 
+            data = biodegrad_crossing_filt)
+summary(modl)
+TukeyHSD(modl)
+modl <- aov(k_C_d_log10 ~ DOMSource * as.factor(Time_d), 
+            data = biodegrad_crossing_filt)
+summary(modl)
+TukeyHSD(modl)
+```
+
 
 # Supplemental
 
