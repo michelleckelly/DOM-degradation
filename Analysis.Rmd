@@ -910,46 +910,43 @@ rm(dropSynth)
 rm(synthesis_filt)
 ```
 
-```{r Fig5plot, fig.width=7.25, fig.height = 4.75}
+```{r Fig5plot, fig.width=7.25, fig.height = 5}
 # a. Time of sample collection #################################################
 a <- 
   ggplot(data = synthesis_fw %>% filter(incubationTime_d > 0),
-         aes(x = incubationTime_d)) +
-  geom_vline(xintercept = 0, color = "lightgrey", alpha = 0.4) +
-  geom_hline(yintercept = 0, color = "lightgrey", alpha = 0.4) +
-  geom_vline(xintercept = 1, color = "lightgrey", linetype = 2, alpha = 0.4) +
-  geom_vline(xintercept = 3, color = "lightgrey", linetype = 2, alpha = 0.4) +
-  geom_vline(xintercept = 7, color = "lightgrey", linetype = 2, alpha = 0.4) +
-  geom_vline(xintercept = 14, color = "lightgrey", linetype = 2, alpha = 0.4) +
-  geom_density(aes(color = System, fill = System), alpha = 0.25) +
+         aes(x = incubationTime_d, y = System)) +
+  geom_density_ridges2(aes(color = System, fill = System),
+                       scale = 0.8) +
+  geom_vline(xintercept = 1, color = "white", linetype = 1) +
+  geom_vline(xintercept = 3, color = "white", linetype = 1) +
+  geom_vline(xintercept = 7, color = "white", linetype = 1) +
+  geom_vline(xintercept = 14, color = "white", linetype = 1) +
   labs(tag = "a") + theme_minimal() + 
-  xlab("Elapsed time (days)") +
-  ylab("Proportion") +
+  xlab("Time of sample collection (days)") +
+  ylab("Habitat") +
   scale_fill_manual(values = c("#D84727","#2E4756"),
                     name = "Habitat") +
   scale_color_manual(values = c("#D84727","#2E4756"),
                      name = "Habitat") +
   theme(axis.text = element_text(color = "black", size = 8),
         axis.title = element_text(color = "black", size = 10),
-        legend.position = c(0.85,0.7), 
-        plot.margin = unit(rep(0.05, 4), "cm"))
+        legend.position = "none")
 
 # b. Maximum incubation time ###################################################
 b <- 
   ggplot(data = synthesis_fw %>% 
          group_by(Citation, System, Site, Sample) %>% 
          mutate(maxTime = max(incubationTime_d)),
-         aes(x = maxTime)) +
-  geom_vline(xintercept = 0, color = "lightgrey", alpha = 0.4) +
-  geom_hline(yintercept = 0, color = "lightgrey", alpha = 0.4) +
-  geom_vline(xintercept = 1, color = "lightgrey", linetype = 2, alpha = 0.4) +
-  geom_vline(xintercept = 3, color = "lightgrey", linetype = 2, alpha = 0.4) +
-  geom_vline(xintercept = 7, color = "lightgrey", linetype = 2, alpha = 0.4) +
-  geom_vline(xintercept = 14, color = "lightgrey", linetype = 2, alpha = 0.4) +
-  geom_density(aes(color = System, fill = System), alpha = 0.25) +
+         aes(x = maxTime, y = System)) +
+  geom_density_ridges2(aes(color = System, fill = System),
+                       scale = 0.8) +
+  geom_vline(xintercept = 1, color = "white", linetype = 1) +
+  geom_vline(xintercept = 3, color = "white", linetype = 1) +
+  geom_vline(xintercept = 7, color = "white", linetype = 1) +
+  geom_vline(xintercept = 14, color = "white", linetype = 1) +
   labs(tag = "b") + theme_minimal() + 
   xlab("Maximum incubation time (days)") +
-  ylab("Proportion") +
+  ylab("Habitat") +
   scale_fill_manual(values = c("#D84727","#2E4756"),
                     name = "Habitat") +
   scale_color_manual(values = c("#D84727","#2E4756"),
@@ -963,7 +960,7 @@ b <-
 c <- 
   ggplot(data = synth_deltaDOC, aes(x = System, y = deltaDOC_mgCL)) +
   # Overlay points
-  geom_jitter(aes(color = System), width = 0.25, shape = 21, alpha = 0.75) +
+  geom_jitter(aes(color = System), width = 0.25, shape = 16, alpha = 0.75) +
   stat_summary(aes(fill = System), geom = "pointrange", fun.data = mean_se,
                size = 0.75, shape = 23) +
   # Add stats tests
@@ -984,12 +981,14 @@ c <-
 # d. Biodegradability ##########################################################
 d <- 
   ggplot(data = synthesis_fw, aes(x = incubationTime_d, y = BDOC_perc)) +
-  geom_point(aes(color = System), alpha = 0.75, shape = 21) +
+  geom_point(aes(color = System), alpha = 0.75, shape = 16) +
   # Trend line
-  geom_smooth(aes(group = System, color = System, fill = System), 
-              method = "lm", fullrange = TRUE, alpha = 0.25) +
+  geom_smooth(data = filter(synthesis_fw, System == "River"),
+              aes(group = System, color = System, fill = System), 
+              method = "lm", fullrange = TRUE, alpha = 0.25,
+              fill = "#2E4756", color = "#2E4756") +
   stat_regline_equation(aes(color = System), size = 2.5, label.x = log10(0.3), 
-                        label.y = c(log10(225), log10(135))) +
+                        label.y = c(log10(500), log10(135))) +
   stat_cor(aes(color = System, label = paste(after_stat(rr.label), 
                                              after_stat(p.label), 
                                              sep = "~`,`~")), size = 2.5, 
@@ -1011,13 +1010,13 @@ d <-
 # e. Removal rate ##############################################################
 e <- 
   ggplot(data = synthesis_fw, aes(x = incubationTime_d, y = k_day)) +
-  geom_point(aes(color = System), alpha = 0.75, shape = 21) +
+  geom_point(aes(color = System), alpha = 0.75, shape = 16) +
   # Trend line
-  geom_smooth(data = synthesis_fw %>% filter(System == "River"),
-                aes(group = System, color = System), fill = "#2E4756", 
+  geom_smooth(data = synthesis_fw,
+                aes(color = System, fill = System), 
               method = "lm", fullrange = TRUE) +
   stat_regline_equation(size = 2.5, label.x = log10(3.5), 
-                        label.y = c(log10(100), log10(3)),
+                        label.y = c(log10(6), log10(3)),
                         aes(group = System, color = System)) +
   stat_cor(aes(color = System, label = paste(after_stat(rr.label), 
                                              after_stat(p.label), 
@@ -1029,7 +1028,7 @@ e <-
   scale_fill_manual(values = c("#D84727","#2E4756")) +
   scale_color_manual(values = c("#D84727","#2E4756")) +
   scale_y_log10() + scale_x_log10() +
-  coord_cartesian(ylim = c(0.0005, 6)) +
+  coord_cartesian(ylim = c(0.0005, 20)) +
   labs(tag = "e") + theme_minimal() +  
   xlab("Elapsed time (days)") +
   ylab(expression("Removal rate ("~d^{-1}*")")) +
@@ -1042,7 +1041,7 @@ lay <- rbind(c(1,1,1,1,2,2,2,2),
              c(3,3,4,4,4,5,5,5),
              c(3,3,4,4,4,5,5,5))
 grob <- grid.arrange(a, b, c, d, e, layout_matrix = lay)
-ggsave(grob, file = "figures/Figure_5.png", width = 7.25, height = 4.75, 
+ggsave(grob, file = "figures/Figure_5.png", width = 7.25, height = 5, 
        units = "in", dpi = 300)
 ```
 
