@@ -970,13 +970,7 @@ c <-
   labs(tag = "c") + theme_minimal() +  
   xlab("Habitat") + ylab(expression(Delta*"DOC (mg-C"~L^{-1}*")")) +
   theme(axis.text = element_text(color = "black", size = 10),
-        plot.margin = unit(c(0.05,0.05,0.05,0.05), "cm"),
-        legend.key.size = unit(0.5, "cm"),
-        legend.title = element_text(size = 10),
-        strip.text = element_text(size = 10),
-        legend.text = element_text(size = 8),
-        legend.position = "none", legend.direction = "vertical",
-        legend.justification = c(0.5,0.5))
+        legend.position = "none")
 
 # d. Biodegradability ##########################################################
 d <- 
@@ -988,11 +982,11 @@ d <-
               method = "lm", fullrange = TRUE, alpha = 0.25,
               fill = "#2E4756", color = "#2E4756") +
   stat_regline_equation(aes(color = System), size = 2.5, label.x = log10(0.3), 
-                        label.y = c(log10(500), log10(135))) +
+                        label.y = c(log10(500), log10(140))) +
   stat_cor(aes(color = System, label = paste(after_stat(rr.label), 
                                              after_stat(p.label), 
                                              sep = "~`,`~")), size = 2.5, 
-           label.x = log10(0.3), label.y = c(log10(180), log10(110)),
+           label.x = log10(0.3), label.y = c(log10(200), log10(110)),
            p.accuracy = 0.001, r.accuracy = 0.001) +
   scale_y_log10() + scale_x_log10() +
   scale_fill_manual(values = c("#D84727","#2E4756")) +
@@ -1003,7 +997,6 @@ d <-
   ylab(expression("Biodegradability (%)")) +
   theme(axis.text = element_text(color = "black", size = 8),
         axis.title = element_text(color = "black", size = 10),
-        plot.margin = unit(rep(0.05, 4), "cm"),
         legend.position = "none", 
         legend.key.size = unit(0.5, units = "cm"))
 
@@ -1015,26 +1008,26 @@ e <-
   geom_smooth(data = synthesis_fw,
                 aes(color = System, fill = System), 
               method = "lm", fullrange = TRUE) +
-  stat_regline_equation(size = 2.5, label.x = log10(3.5), 
-                        label.y = c(log10(6), log10(3)),
+  stat_regline_equation(size = 2.5, label.x = log10(0.3), 
+                        label.y = c(log10(20), log10(7)),
                         aes(group = System, color = System)) +
   stat_cor(aes(color = System, label = paste(after_stat(rr.label), 
                                              after_stat(p.label), 
                                              sep = "~`,`~")),
-           size = 2.5, label.x = log10(3.5), 
-           label.y = c(log10(4.75), log10(2)),
+           size = 2.5, label.x = log10(0.3), 
+           label.y = c(log10(12), log10(4.5)),
            p.accuracy = 0.001, r.accuracy = 0.001) +
   
   scale_fill_manual(values = c("#D84727","#2E4756")) +
   scale_color_manual(values = c("#D84727","#2E4756")) +
-  scale_y_log10() + scale_x_log10() +
-  coord_cartesian(ylim = c(0.0005, 20)) +
+  scale_x_log10() +
+  scale_y_log10(limits = c(0.0005, 20), breaks = c(1E-3, 1E-2, 1E-1, 1E0, 1E1),
+                     labels = c(0.001, 0.01, 0.1, 1, 10)) +
   labs(tag = "e") + theme_minimal() +  
   xlab("Elapsed time (days)") +
   ylab(expression("Removal rate ("~d^{-1}*")")) +
   theme(axis.text = element_text(color = "black", size = 8),
         axis.title = element_text(color = "black", size = 10),
-        plot.margin = unit(rep(0.05, 4), "cm"),
         legend.position = "none")
 
 lay <- rbind(c(1,1,1,1,2,2,2,2),
