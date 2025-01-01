@@ -87,11 +87,6 @@ eem$DOMSource[eem$DOMSource == "Chlorella"] <- "CHLOR"
 eem$DOMSource <- 
   factor(eem$DOMSource, 
          level = c("SRFA", "ES", "CHLOR"))
-
-# Filter to samples collected on 12 July or after
-eem_exp2 <-
-  eem %>%
-  filter(CollectionDate >= ymd("2022-07-12"))
 ```
 
 ```{r Fig2plot, fig.height=5, fig.width=7}
@@ -191,12 +186,11 @@ nutrient <-
 
 # If concentration is less than detection, set to 0
 nutrient$Concentration[nutrient$Concentration == "<LOD"] <- 0
-nutrient$Concentration[nutrient$Concentration == "< LOD"] <- 0
 
 # Format columns
 nutrient <- 
   nutrient %>%
-  mutate(CollectionDate = mdy(CollectionDate),
+  mutate(CollectionDate = ymd(CollectionDate),
          Concentration = as.numeric(Concentration),
          DayOfExperiment = as.factor(DayOfExperiment))
 
@@ -236,8 +230,6 @@ rm(meanInit_TDN)
 # Select crossing nutrient data
 nut_crossing <-
   nutrient %>%
-  filter(Experiment %in% c("DOM Crossing Experiment 1",
-                           "DOM Crossing Experiment 2")) %>%
   mutate(DayOfExperiment = as.numeric(as.character(DayOfExperiment)), 
          DayOfExperiment = case_when(DayOfExperiment == 0 ~ "initial", 
                                      DayOfExperiment == 14 ~ "final"),
@@ -318,8 +310,6 @@ gas <- read_csv(file =  "data/gasConcentrations_CrossingExperiment.csv")
 # Select crossing experiment data
 gas_crossing <-
   gas %>% 
-  filter(Experiment %in% c("DOM Crossing Experiment 1", 
-                           "DOM Crossing Experiment 2")) %>%
   mutate(Experiment = as.factor(Experiment),
          CO2Accum_mg = CO2Accum_ug/1000, # convert ug to mg
          # Recode replicates so replicate numbers 1-3 refer only to 
@@ -719,7 +709,7 @@ ggsave(file = "figures/Figure_4.png", width = 8, height = 8,
 ```{r Fig5 analysis}
 # Synthesis rules: excluded experiments, microbial community must be sourced 
 # from the natural waters
-synthesis <- read_csv(file = "data/DOCDecay_bioassays_synthesis.csv")
+synthesis <- read_csv(file = "data/synthesis.csv")
 
 # Calc BDOC and k
 synthesis <- 
