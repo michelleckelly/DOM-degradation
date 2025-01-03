@@ -35,6 +35,40 @@ library(kableExtra)
 
 ## Figure 1
 
+```{r Fig1example, eval=FALSE}
+# Establish what curves in figure 1 should look like
+
+# Make some dummy data, biodegrad values based on our dataset
+dummyData <- 
+  data_frame(incubat = c(rep("A", 6), rep("B", 6)),
+             incubationTime_d = c(rep(c(0, 0.1, 1, 3, 7, 10), 2)),
+             biodegrad_perc = c(0, 1, 10, 25, 40, 45,
+                                0, 1, 5, 10, 17, 20)) %>%
+  # Back calculate DOCf
+  mutate(DOCi_mgL = 20,
+         DOCf_mgL = -biodegrad_perc/100 * DOCi_mgL + DOCi_mgL,
+         k_C_d = -1/incubationTime_d * log(DOCf_mgL / DOCi_mgL))
+
+dummyData <- 
+  data_frame(incubat = c(rep("A", 7), rep("B", 7)),
+             incubationTime_d = c(rep(c(0, 0.1, 1, 3, 5, 7, 10), 2)),
+             biodegrad_perc = c(0, 1, 10, 20, 20.5, 21, 21,
+                                0, 0.1, 3, 11, 15, 18, 20)) %>%
+  # Back calculate DOCf
+  mutate(DOCi_mgL = 20,
+         DOCf_mgL = -biodegrad_perc/100 * DOCi_mgL + DOCi_mgL,
+         k_C_d = -1/incubationTime_d * log(DOCf_mgL / DOCi_mgL))
+
+# Make plots
+ggplot(dummyData, aes(x = incubationTime_d, y = biodegrad_perc)) +
+  geom_line(aes(color = incubat))
+
+ggplot(dummyData, aes(x = incubationTime_d, y = k_C_d)) +
+  geom_line(aes(color = incubat))
+
+# Redraw these plots in powerpoint so they'll look nice
+```
+
 ```{r Fig1, out.width="100%"}
 knitr::include_graphics("images/Figure_1.png")
 ```
@@ -943,174 +977,22 @@ maxDur %>%
 
 # Avg delta DOC
 t.test(deltaDOC_mgCL ~ System, data = synth_deltaDOC)
-# STOPPED HERE
-
-
-
-# polynomial regression w/ biodegradability
-modl <- lm(BDOC_perc ~ log10(incubationTime_d), 
-           data = synthesis %>% 
-             filter(BDOC_perc >= 0 & incubationTime_d <= 42
-                    )
-           )
-bdocmod <- summary(modl)
-# polynomial regression w/ removal rate
-modl <- lm(k_day ~ log10(incubationTime_d), 
-           data = synthesis %>% 
-             filter(k_day >= 0 & incubationTime_d <= 42
-                    )
-           )
-kmod <- summary(modl)
-
-
-
-# Avg maximum duration
-durat <- 
-  synthesis_fw %>% 
-  group_by(Citation, System, Site, Sample) %>% 
-  mutate(maxTime = max(incubationTime_d)) 
-durat %>%
-  ungroup() %>% 
-  group_by(System) %>%
-  summarise(mean(maxTime), sd(maxTime))
-t.test(maxTime ~ System, data = durat)
-
-# calc slopes after groupuing by Citation, System, Sample
-# NOTE: left off trying to figure out how to calc a linear model for each incubation and extract slope from each lm
-# Model to fit for each site
-BDOCModel <- function(dataset){
-  lm(log10(BDOC_perc+1E-5) ~ log10(incubationTime_d+1E-5), data = dataset)
-}
-kModel <- function(dataset){
-  lm(log10(k_day+1E-5) ~ log10(incubationTime_d+1E-5), data = dataset)
-}
-
-synthesisModels_BDOC <- 
-  synthesis_filt %>%
-  filter(incubationTime_d > 0 & BDOC_perc > 0 & 
-           System %in% c("Lake", "River", "Ocean")) %>%
-  group_by(Citation, System, Site, Sample) %>%
-  nest() %>%
-  mutate(BDOClm = map(data, BDOCModel),
-         tidy = map(BDOClm, broom::tidy)) %>%
-  unnest(tidy) %>%
-  filter(term == "log10(incubationTime_d + 1e-05)")
-
-synthesisModels_k <- 
-  synthesis_filt %>%
-  filter(incubationTime_d > 0 & BDOC_perc > 0 & 
-           System %in% c("Lake", "River", "Ocean")) %>%
-  group_by(Citation, System, Site, Sample) %>%
-  nest() %>%
-  mutate(klm = map(data, kModel),
-         tidy = map(klm, broom::tidy)) %>%
-  unnest(tidy) %>%
-  filter(term == "log10(incubationTime_d + 1e-05)")
-
-t.test(deltaDOC_mgCL ~ System, data = synth_deltaDOC)
 mean(synth_deltaDOC$deltaDOC_mgCL)
 sd(synth_deltaDOC$deltaDOC_mgCL)
 
-nrow(synthesis) # number of measurements
-length(unique(synthesis$SiteName)) # Number of total bioassays
-# Number of bioassays where DOC is measured at more than one time point
-length(unique(synthesis_siteCodes$SiteName))
-# Number of studies
-length(unique(synthesis$Citation))
-# Min incubation length
-min(synthesis$incubationTime_d)
-max(synthesis$incubationTime_d)
-# Common incubation lengths
-synthesis %>%
-  group_by(incubationTime_d) %>%
-  summarise(count = length(incubationTime_d)) %>%
-  arrange(desc(count))
+# polynomial regression w/ biodegradability
+modl <- lm(log10(BDOC_perc) ~ log10(incubationTime_d), data = synthesis_fw)
+summary(modl)
 
-## Rate of change analysis ####################################################
-# BDOC fit
-bdocmod
-# squared residual standard error
-bdocmod$sigma^2
-# C decay
-kmod
-# squared residual standard error
-kmod$sigma^2
+# Difference in biodegradability between habitats
+t.test(BDOC_perc ~ System, data = synthesis_fw)
+synthesis_fw %>%
+  ungroup() %>% group_by(System) %>%
+  summarise(mean(BDOC_perc), sd(BDOC_perc),
+            mean(k_day), sd(k_day))
 
-## Table 3
-times <- c(1, 3, 7, 14, 21, 28)
-## BDOC derivative
-round(15 / (times * log(10)), 3)
-## k derivative
-round(-0.0217/times, 3)
-
-# Variability
-synthesis_timeSeries %>% 
-  ungroup() %>%
-  # Plotting criteria
-  filter(incubationTime_d <= 42 & (BDOC_perc >= 0 & k_day >- 0)) %>%
-  summarise(CV_BDOC = sd(BDOC_perc, na.rm = T)/mean(BDOC_perc, na.rm = T), 
-            CV_k = sd(k_day, na.rm = T)/mean(k_day, na.rm = T))
-
-# Plot the residuals
-# bdoc model
-residuals_bdoc <- 
-  synthesis %>% 
-  filter(BDOC_perc >= 0 & incubationTime_d <= 42) %>%
-  select(-c(DOCf_mgL, DOCi_mgL, k_day))
-residuals_bdoc$residuals <- bdocmod$residuals
-# k model
-residuals_k <- 
-  synthesis %>% 
-  filter(k_day >= 0 & incubationTime_d <= 42) %>%
-  select(-c(DOCf_mgL, DOCi_mgL, BDOC_perc))
-residuals_k$residuals <- kmod$residuals
-
-ggplot(data = residuals_bdoc, aes(x = incubationTime_d, y = residuals)) +
-  geom_hline(yintercept = 0, linetype = 2, color = "darkgrey") +
-  geom_point(shape = 21) +
-  stat_cor() +
-  labs(tag = "a") + 
-  xlab("Incubation time (days)") +
-  ylab("Residuals of biodegradability model") +
-  theme_minimal() +  
-  theme(axis.text = element_text(color = "black", size = 8),
-        panel.grid.major.x = element_blank(),
-        axis.title = element_text(color = "black", size = 10),
-        axis.text.x = element_blank(),
-        plot.margin = unit(rep(0.05, 4), "cm"))
-
-qqnorm(residuals_bdoc$BDOC_perc)
-
-ggplot(data = residuals_k, aes(x = incubationTime_d, y = residuals)) +
-  geom_hline(yintercept = 0, linetype = 2, color = "darkgrey") +
-  geom_point(shape = 21) +
-  stat_cor() +
-  stat_regline_equation() +
-  labs(tag = "b") + 
-  xlab("Incubation time (days)") +
-  ylab("Residuals of C removal rate model") +
-  theme_minimal() +  
-  theme(axis.text = element_text(color = "black", size = 8),
-        panel.grid.major.x = element_blank(),
-        axis.title = element_text(color = "black", size = 10),
-        axis.text.x = element_blank(),
-        plot.margin = unit(rep(0.05, 4), "cm"))
-
-qqnorm(residuals_k$k_day)
-
-ggplot(residuals_bdoc, aes(sample = BDOC_perc)) +
-  stat_qq_line(linetype = 2) +
-  stat_qq(shape = 1) +
-  xlab("Normal theoretical quantiles") +
-  ylab("Sample quantiles of biodegradability") +
-  theme_minimal() 
-ggplot(residuals_k, aes(sample = k_day)) +
-  stat_qq_line(linetype = 2) +
-  stat_qq(shape = 1) +
-  xlab("Normal theoretical quantiles") +
-  ylab("Sample quantiles of C removal rate") +
-  theme_minimal() 
-
+# difference in removal rate between habitats
+t.test(k_day ~ System, data = synthesis_fw)
 ```
 
 ## Figure 6
