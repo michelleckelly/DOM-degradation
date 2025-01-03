@@ -89,12 +89,22 @@ eem$DOMSource <-
          level = c("SRFA", "ES", "CHLOR"))
 ```
 
+```{r Fig2 stats, eval=FALSE}
+massSpec %>%
+  group_by(DOMSource) %>%
+  summarise(length(formula), mean(O_C), sd(O_C), mean(H_C), sd(H_C))
+
+# Kruskall-wallis as groups are unbalanced
+kruskal.test(O_C ~ DOMSource, data = massSpec)
+kruskal.test(H_C ~ DOMSource, data = massSpec)
+```
+
 ```{r Fig2plot, fig.height=5, fig.width=7}
 # a. Plot O:C mass spec data
 a <- 
   ggplot(data = massSpec, aes(x = O_C, y = DOMSource, color = DOMSource)) +
   geom_density_ridges2(aes(fill = DOMSource), scale = 0.8, color = NA) +
-  geom_boxplot(width = 0.15, outlier.shape = NA, coef = 0) +
+  geom_boxplot(width = 0.2, outlier.shape = NA, coef = 0) +
   scale_fill_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
                                "SRFA"="#2E4756")) +
   scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
@@ -103,16 +113,14 @@ a <-
   theme_minimal() + labs(tag = "a") +
   xlab("Oxygen:Carbon") + 
   ylab(expression("DOM Source")) +
-  theme(axis.text = element_text(color = "black", size = 8),
-        axis.title = element_text(color = "black", size = 10),
-        plot.background = element_rect(fill = "white", color = NA),
+  theme(plot.background = element_rect(fill = "white", color = NA),
         legend.position = "none")
 
 # b. Plot H:C mass spec data 
 b <- 
   ggplot(data = massSpec, aes(x = H_C, y = DOMSource, color = DOMSource)) +
   geom_density_ridges2(aes(fill = DOMSource), scale = 0.8, color = NA) +
-  geom_boxplot(width = 0.15, outlier.shape = NA, coef = 0) +
+  geom_boxplot(width = 0.2, outlier.shape = NA, coef = 0) +
    scale_fill_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
                                "SRFA"="#2E4756")) +
   scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
@@ -121,14 +129,12 @@ b <-
   theme_minimal() + labs(tag = "b") +
   xlab("Hydrogen:Carbon") + 
   ylab(expression("DOM Source")) +
-  theme(axis.text = element_text(color = "black", size = 8),
-        axis.title = element_text(color = "black", size = 10),
-        plot.background = element_rect(fill = "white", color = NA),
+  theme(plot.background = element_rect(fill = "white", color = NA),
         legend.position = "none")
 
 # c. Plot HIX by DOM source
 c <- 
-  ggplot(data = eem_exp2 %>% 
+  ggplot(data = eem %>% 
          filter(BlankOrSample %in% c("T0") &
                   DayOfExperiment == 0),
        aes(x = DOMSource, y = HIX)) +
@@ -139,15 +145,13 @@ c <-
                                "SRFA"="#2E4756"), guide = "none") +
   # Theme adjustments
   theme_minimal() + labs(tag = "c") +
-  xlab("DOM Source") + ylab(expression("Humification index (HIX)")) +
+  xlab("DOM Source") + ylab(expression("HIX")) +
   scale_shape_manual(values = c(21, 24)) + coord_cartesian(ylim = c(0, 8)) +
-  theme(axis.text = element_text(color = "black", size = 8),
-        axis.title = element_text(color = "black", size = 10),
-        plot.background = element_rect(fill = "white", color = NA),
+  theme(plot.background = element_rect(fill = "white", color = NA),
         legend.position = "none")
 # BIX
 d <- 
-  ggplot(data = eem_exp2 %>% 
+  ggplot(data = eem %>% 
          filter(BlankOrSample %in% c("T0") &
                   DayOfExperiment == 0),
        aes(x = DOMSource, y = BIX)) +
@@ -158,22 +162,21 @@ d <-
                                "SRFA"="#2E4756"), guide = "none") +
   # Theme adjustments
   theme_minimal() + labs(tag = "d") + coord_cartesian(ylim = c(0, 1)) +
-  xlab("DOM Source") + ylab(expression("Freshness index (BIX)")) +
+  xlab("DOM Source") + ylab(expression("BIX")) +
   scale_shape_manual(values = c(21, 24)) +
-  theme(axis.text = element_text(color = "black", size = 8),
-        axis.title = element_text(color = "black", size = 10),
-        plot.background = element_rect(fill = "white", color = NA),
+  theme(lot.background = element_rect(fill = "white", color = NA),
         legend.position = "none")
 
-
-lay <- rbind(c(1,1,3),
-             c(2,2,4))
+lay <- rbind(c(1,2),
+             c(1,2),
+             c(1,2),
+             c(3,4),
+             c(3,4))
 grob <- grid.arrange(a, b, c, d, layout_matrix = lay)
 
 # Save plot
 ggsave(grob, file = "figures/Figure_2.png", 
-       width = 7, height = 5, 
-       units = "in", dpi = 300)
+       width = 6, height = 4.5, units = "in", dpi = 300)
 ```
 
 ## Figure 3
@@ -336,13 +339,19 @@ biodegrad_crossing <-
   gas_crossing %>%
   group_by(Experiment, Enrichment, DOMSource, Replicate, Time_hrs) %>%
   mutate(CO2Rate_mgmin = CO2Rate_ugmin/1000,
+         O2Rate_mgmin = O2Rate_ugmin/1000,
          CO2Accum_mg = CO2Accum_ug/1000, 
+         O2Accum_mg = O2Accum_ug/1000,
          Volume_L = Volume_mL/1000,
          CO2Accum_mgL = CO2Accum_mg/Volume_L,
-         CO2Rate_mgminL = CO2Rate_mgmin/Volume_L) %>%
-  transmute(Time_d = Time_hrs/24,
-            CO2Accum_mgCL = CO2Accum_mgL/1000/44*12*1000,
-            CO2Rate_mgCLmin = CO2Rate_mgminL/1000/44*12*1000)
+         O2Accum_mgL = O2Accum_mg/Volume_L,
+         CO2Rate_mgminL = CO2Rate_mgmin/Volume_L,
+         O2Rate_mgminL = O2Rate_mgmin/Volume_L,
+         Time_d = Time_hrs/24,
+         CO2Accum_mgCL = CO2Accum_mgL/1000/44*12*1000,
+         CO2Rate_mgCLmin = CO2Rate_mgminL/1000/44*12*1000) %>%
+  select(Time_hrs, Time_d, CO2Accum_mgCL, CO2Rate_mgCLmin, O2Rate_mgminL,
+         O2Accum_mgL)
 
 # Loop through replicates to calculate biodegradability at each timestep
 # Initialize vector
@@ -489,7 +498,7 @@ deltaDOC <-
   biodegrad_crossing_interp %>%
   select(Experiment, Enrichment, DOMSource, Replicate, initial_DOC_mgCL,
          final_DOC_mgCL) %>%
-  filter(Enrichment != "CTRL\nmicrobes") %>%
+  #filter(Enrichment != "CTRL\nmicrobes") %>%
   distinct() %>% 
   mutate(deltaDOC_mgCL = final_DOC_mgCL - initial_DOC_mgCL,
          deltaDOC_percChange = (final_DOC_mgCL - initial_DOC_mgCL)/
@@ -503,7 +512,6 @@ deltaDOC_CTRL <-
   mutate(deltaDOC_mgCL = final_DOC_mgCL - initial_DOC_mgCL,
          deltaDOC_percChange = (final_DOC_mgCL - initial_DOC_mgCL)/
            initial_DOC_mgCL*100)
-
 ```
 
 ```{r Fig3plot, fig.height=6, fig.width=7.5}
@@ -518,29 +526,34 @@ deltaDOC$Enrichment <- paste0(str_extract(deltaDOC$Enrichment,
                                   pattern = "(.+)\nmicrobes", 1), 
                               " microbes")
 deltaDOC$Enrichment <- factor(deltaDOC$Enrichment, 
-                             levels = paste0(c("SRFA", "ES", "CHLOR"), 
+                             levels = paste0(c("CTRL", "SRFA", "ES", "CHLOR"), 
                                              " microbes"))
 
-a <-
-  ggplot(data = deltaDOC %>% filter(Enrichment != "CTRL\nmicrobes"), 
+#a <-
+  ggplot(data = deltaDOC #%>% filter(Enrichment != "CTRL\nmicrobes")
+         , 
        aes(x = DOMSource, y = deltaDOC_mgCL)) +
   # Overlay points
-  geom_jitter(aes(shape = Enrichment, fill = DOMSource, color = DOMSource), 
+  geom_jitter(aes(shape = Enrichment, color = DOMSource), 
               size = 2.5, width = 0.25, alpha = 0.5) +
   stat_summary(aes(fill = DOMSource), geom = "pointrange", fun.data = mean_se,
                size = 0.75, shape = 23) +
   # Shape and color scales
-  scale_fill_manual(values = c("CHLOR microbes" = "#D84727", "CHLOR" = "#D84727",
-                               "ES microbes" = "#FFB000", "ES" = "#FFB000",
-                               "SRFA microbes"="#2E4756", "SRFA"="#2E4756"), 
-                    guide = "none") +
+  #scale_fill_manual(values = c("CHLOR microbes" = "#D84727", "CHLOR" = "#D84727",
+   #                            "ES microbes" = "#FFB000", "ES" = "#FFB000",
+    #                           "SRFA microbes"="#2E4756", "SRFA"="#2E4756"
+     #                          ), 
+      #              guide = "none") +
   scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
+                               "SRFA"="#2E4756"), 
+                    guide = "none") +
+  scale_fill_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
                                "SRFA"="#2E4756"), 
                     guide = "none") +
   # Theme adjustments
   theme_minimal() + labs(tag = "a") +
   xlab("DOM source") + ylab(expression(Delta*"DOC (mg-C"~L^{-1}*")")) +
-  scale_shape_manual(values = c(c(21, 24, 22))) +
+  scale_shape_manual(values = c(c(3, 16, 17, 15))) +
   guides(shape = guide_legend(theme = theme(legend.title = 
                                               element_text(hjust = 0.5)))) +
   theme(axis.text = element_text(color = "black", size = 10),
@@ -692,15 +705,12 @@ ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
   xlab("Elapsed time (days)") + 
   ylab(expression("C removal rate ("*d^{-1}*")")) +
   scale_shape_manual(values = c(21, 24)) +
-  theme(axis.text = element_text(color = "black", size = 8),
+  theme(axis.text = element_text(color = "black"),
         panel.spacing = unit(0, "lines"), 
         plot.background = element_rect(fill = "white", color = NA),
-        legend.position = "none", 
-        legend.title = element_text(size = 8), legend.key.size = unit(0.4, "cm"),
-        legend.direction = "vertical", 
-        legend.background = element_rect(color = "black"))
+        legend.position = "none")
 
-ggsave(file = "figures/Figure_4.png", width = 8, height = 8, 
+ggsave(file = "figures/Figure_4.png", width = 6, height = 6, 
        dpi = 300, units = "in")
 ```
 
@@ -806,7 +816,7 @@ c <-
   stat_summary(aes(fill = System), geom = "pointrange", fun.data = mean_se,
                size = 0.75, shape = 23) +
   # Add stats tests
-  stat_compare_means(label.y =3, method = "anova", label.x = 1, size = 2.5) +
+  #stat_compare_means(label.y =3, method = "kruskal.test", label.x = 1, size = 2.5) +
   scale_fill_manual(values = c("#D84727","#2E4756")) +
   scale_color_manual(values = c("#D84727","#2E4756")) +
   labs(tag = "c") + theme_minimal() +  
@@ -819,21 +829,22 @@ d <-
   ggplot(data = synthesis_fw, aes(x = incubationTime_d, y = BDOC_perc)) +
   geom_point(aes(color = System), alpha = 0.75, shape = 16) +
   # Trend line
-  geom_smooth(data = filter(synthesis_fw, System == "River"),
+  geom_smooth(data = synthesis_fw,
               aes(group = System, color = System, fill = System), 
-              method = "lm", fullrange = TRUE, alpha = 0.25,
-              fill = "#2E4756", color = "#2E4756") +
-  stat_regline_equation(aes(color = System), size = 2.5, label.x = log10(0.3), 
-                        label.y = c(log10(500), log10(140))) +
+              method = "lm", fullrange = TRUE, alpha = 0.25) +
+  stat_regline_equation(aes(color = System), size = 2.5, 
+                        label.x = log10(0.02), 
+                        label.y = c(log10(0.75), log10(0.375))) +
   stat_cor(aes(color = System, label = paste(after_stat(rr.label), 
                                              after_stat(p.label), 
                                              sep = "~`,`~")), size = 2.5, 
-           label.x = log10(0.3), label.y = c(log10(200), log10(110)),
+           label.x = log10(0.02), 
+           label.y = c(log10(0.55), log10(0.275)),
            p.accuracy = 0.001, r.accuracy = 0.001) +
   scale_y_log10() + scale_x_log10() +
   scale_fill_manual(values = c("#D84727","#2E4756")) +
   scale_color_manual(values = c("#D84727","#2E4756")) +
-  coord_cartesian(ylim = c(0.5, 200)) +
+  coord_cartesian(ylim = c(0.25, 100)) +
   labs(tag = "d") + theme_minimal() +  
   xlab("Elapsed time (days)") +
   ylab(expression("Biodegradability (%)")) +
@@ -850,20 +861,22 @@ e <-
   geom_smooth(data = synthesis_fw,
                 aes(color = System, fill = System), 
               method = "lm", fullrange = TRUE) +
-  stat_regline_equation(size = 2.5, label.x = log10(0.3), 
-                        label.y = c(log10(20), log10(7)),
+  stat_regline_equation(size = 2.5, 
+                        label.x = log10(0.02), 
+                        label.y = c(log10(0.0018), log10(0.0005)),
                         aes(group = System, color = System)) +
   stat_cor(aes(color = System, label = paste(after_stat(rr.label), 
                                              after_stat(p.label), 
                                              sep = "~`,`~")),
-           size = 2.5, label.x = log10(0.3), 
-           label.y = c(log10(12), log10(4.5)),
+           size = 2.5, 
+           label.x = log10(0.02), 
+           label.y = c(log10(0.001), log10(0.0003)),
            p.accuracy = 0.001, r.accuracy = 0.001) +
   
   scale_fill_manual(values = c("#D84727","#2E4756")) +
   scale_color_manual(values = c("#D84727","#2E4756")) +
   scale_x_log10() +
-  scale_y_log10(limits = c(0.0005, 20), breaks = c(1E-3, 1E-2, 1E-1, 1E0, 1E1),
+  scale_y_log10(limits = c(0.00025, 20), breaks = c(1E-3, 1E-2, 1E-1, 1E0, 1E1),
                      labels = c(0.001, 0.01, 0.1, 1, 10)) +
   labs(tag = "e") + theme_minimal() +  
   xlab("Elapsed time (days)") +
@@ -881,15 +894,18 @@ ggsave(grob, file = "figures/Figure_5.png", width = 7.25, height = 5,
 ```
 
 ```{r Fig5 stats, eval=FALSE}
-# How many studies
-length(unique(synthesis_fw$Citation))
-# How many unique experiment units/bioassays
+# Measurements
+nrow(synthesis_fw)
+
+# Number of incubation experiments
+length(unique(synthesis_fw$Sample))
+
+# How many lakes and rivers
 synthesis_fw %>% 
-  group_by(Citation, System, Site, Sample) %>%
+  select(Citation, System, Site, Sample) %>%
+  group_by(System, Site) %>%
   count()
-synthesis_fw %>% 
-  group_by(System) %>%
-  count()
+
 # Avg # of DOC measurements per experiment unit/bioassay
 synthesis_fw %>% 
   group_by(Citation, System, Site, Sample) %>%
@@ -898,18 +914,38 @@ synthesis_fw %>%
   summarise(mean(n), sd(n)) 
 
 # Number of measurements collected within 24 hours of start
-synthesis_fw %>% 
-  ungroup() %>% 
-  count(incubationTime_d) %>%
-  filter(incubationTime_d <= 1) %>%
-  summarise(sum(n))
-# Avg maximum duration
-synthesis_fw %>% 
+synthesis_fw %>%
   group_by(Citation, System, Site, Sample) %>% 
-  mutate(maxTime = max(incubationTime_d)) %>%
+  summarise(minTime = min(incubationTime_d)) %>%
+  filter(minTime <= 1)
+
+# Most common time points for measurement: different between groups?
+t.test(incubationTime_d ~ System, data = synthesis_fw)
+
+# Most common measurement times
+synthesis_fw %>%
+  ungroup() %>%
+  transmute(incubationTime_d = round(incubationTime_d)) %>%
+  count(incubationTime_d) %>%
+  arrange(-n)
+
+# Avg maximum duration
+maxDur <-
+  synthesis_fw %>% 
+  group_by(Citation, System, Site, Sample) %>% 
+  mutate(maxTime = max(incubationTime_d)) 
+
+t.test(maxTime ~ System, data = maxDur)
+
+maxDur %>%
   ungroup() %>% 
-  group_by(System) %>%
-  summarise(mean(maxTime))
+  summarise(mean(maxTime), sd(maxTime))
+
+# Avg delta DOC
+t.test(deltaDOC_mgCL ~ System, data = synth_deltaDOC)
+# STOPPED HERE
+
+
 
 # polynomial regression w/ biodegradability
 modl <- lm(BDOC_perc ~ log10(incubationTime_d), 
@@ -926,8 +962,7 @@ modl <- lm(k_day ~ log10(incubationTime_d),
            )
 kmod <- summary(modl)
 
-# Most common time points for measurement: different between groups?
-t.test(incubationTime_d ~ System, data = synthesis_fw)
+
 
 # Avg maximum duration
 durat <- 
@@ -1352,6 +1387,59 @@ ggsave(file = "figures/Figure_S3.png", width = 5, height = 5,
 ## Figure S4
 
 ```{r FigS4, fig.width=8, fig.height=8}
+ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
+  # Facet based on DOM source and microbe addition
+  facet_grid(cols = vars(DOMSource),
+             rows = vars(Enrichment)) +
+  # Add color shading based on DOM identity
+  geom_rect(data = shadingNut %>% filter(Enrichment != "CTRL\nmicrobes"), 
+            aes(xmin = -Inf, xmax =  Inf, ymin = -Inf,
+                ymax = Inf, fill =  DOMSource), alpha = 0.5, 
+            color = NA) + 
+  geom_rect(data = shadingNut %>% filter(Enrichment != "CTRL\nmicrobes"), 
+            aes(xmin = -Inf, xmax =  Inf, ymin = -Inf,
+                ymax = Inf, fill =  Enrichment), alpha = 0.5, 
+            color = NA) + 
+  # Add horizontal line at 0
+  geom_vline(xintercept = 0, color = "white", alpha = 0.4) +
+  geom_hline(yintercept = 0, color = "white", alpha = 0.4) +
+  geom_vline(xintercept = 1, color = "white", linetype = 2, alpha = 0.4) +
+  geom_vline(xintercept = 3, color = "white", linetype = 2, alpha = 0.4) +
+  geom_vline(xintercept = 7, color = "white", linetype = 2, alpha = 0.4) +
+  geom_vline(xintercept = 10, color = "white", linetype = 2, alpha = 0.4) +
+  # Add lines for concentrations
+  geom_line(aes(y = O2Rate_mgminL, x = Time_d, group = Replicate),
+            alpha = 0.75, color = "white") +
+  #geom_smooth(aes(y = CO2Rate_mgCLmin, x = Time_d), method = "gam", color = "black") +
+  # Shape and color scales
+  scale_fill_manual(values = c("CHLOR\nmicrobes" = "#D84727",
+                               "CHLOR\nDOM source" = "#D84727",
+                               "ES\nmicrobes" = "#FFB000",
+                               "ES\nDOM source" = "#FFB000",
+                               "SRFA\nmicrobes"="#2E4756", 
+                               "SRFA\nDOM source"="#2E4756"), 
+                    guide = "none") +
+  scale_x_continuous(breaks = c(0, 1, 3, 7, 10)) +
+  #scale_y_continuous(limits = c(-0.002, 0)) +
+  #scale_y_continuous(breaks = c(0, -1E-5, -2E-5), labels = c(0, -0.00001, 0.)) +
+  # Theme adjustments
+  theme_minimal() +  
+  #guides(fill = guide_legend(override.aes = list(shape=21))) +
+  xlab("Elapsed time (days)") +
+  ylab(expression(O[2]~"accumulation rate (mg"~L^{-1}~min^{-1}*")")) +
+  scale_shape_manual(values = c(21, 24)) +
+  theme(axis.text = element_text(color = "black"),
+        panel.spacing = unit(0, "lines"), 
+        plot.background = element_rect(fill = "white", color = NA),
+        legend.position = "none")
+
+ggsave(file = "figures/Figure_S4.png", width = 6, height = 6, 
+       dpi = 300, units = "in")
+```
+
+## Figure S5
+
+```{r FigS5, fig.width=8, fig.height=8}
 ## Plot ########################################################################
 # Flannel plot of biodegradability measurements
 ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
@@ -1401,13 +1489,13 @@ ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
         legend.direction = "vertical", 
         legend.background = element_rect(color = "black"))
 
-ggsave(file = "figures/Figure_S4.png", width =5, height = 5, 
+ggsave(file = "figures/Figure_S5.png", width =5, height = 5, 
        dpi = 300, units = "in")
 ```
 
-## Figure S5
+## Figure S6
 
-```{r FigS5, fig.height=6, fig.width=7.5}
+```{r FigS6, fig.height=6, fig.width=7.5}
 # delta DOC ####################################################################
 a <-
   ggplot(data = deltaDOC_CTRL, 
@@ -1502,7 +1590,7 @@ c <-
 layoutGrid <- rbind(c(1,1,2,2,2,2),
                     c(1,1,3,3,3,3))
 grob <- grid.arrange(a, b, c, layout_matrix = layoutGrid)
-ggsave(grob, file = "figures/Figure_S5.png", 
+ggsave(grob, file = "figures/Figure_S6.png", 
        height = 6, width = 7.5, units = "in", dpi = 300)
 ```
 
