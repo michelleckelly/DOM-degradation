@@ -77,37 +77,13 @@ knitr::include_graphics("images/Figure_1.png")
 
 ```{r Fig2 analysis}
 # Initial mass spec data #######################################################
-# Chlorella
-massSpec_CHLOR_Control <- 
-  read_csv("data/CHLOR Control_100-800_Assigned.csv") %>%
-  mutate(DOMSource = "CHLOR")
-
-# Elliott soil 
-massSpec_ES_Control <- 
-  read_csv("data/ES Control_100-800_Assigned.csv") %>%
-  mutate(DOMSource = "ES")
-
-# SRFA
-massSpec_SRFA_Control <- 
-  read_csv("data/SRFA Control_100-800_2_Assigned.csv") %>%
-  mutate(DOMSource = "SRFA")
-
-# Merge into single dataframe
-massSpec <- 
-  massSpec_CHLOR_Control %>%
-  full_join(massSpec_ES_Control) %>%
-  full_join(massSpec_SRFA_Control) %>%
-  relocate(DOMSource, .before = abundance)
+# Load data
+massSpec <- read_csv("data/massSpec_EnrichmentExperiment.csv")
 
 # Factorize DOM
 massSpec$DOMSource <- 
   factor(massSpec$DOMSource, 
          level = c("SRFA", "ES", "CHLOR"))
-
-# Take out the trash
-rm(massSpec_CHLOR_Control)
-rm(massSpec_ES_Control)
-rm(massSpec_SRFA_Control)
 
 # EEMs data ####################################################################
 # Load data
@@ -1209,6 +1185,31 @@ ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
 
 ggsave(file = "figures/Figure_S2.png", width = 5, height = 5, 
        dpi = 300, units = "in")
+```
+
+```{r FigS2 stats}
+biodegrad_crossing %>%
+  filter(Enrichment != "CTRL\nmicrobes") %>%
+  group_by(DOMSource) %>%
+  summarise(max(CO2Rate_mgCLmin))
+
+biodegrad_crossing %>%
+  filter(Enrichment != "CTRL\nmicrobes") %>%
+  group_by(Enrichment, DOMSource) %>%
+  summarise(max(CO2Rate_mgCLmin))
+
+biodegrad_crossing %>%
+  filter(Enrichment != "CTRL\nmicrobes") %>%
+  group_by(DOMSource) %>%
+  summarise(max(CO2Accum_mgCL))
+
+
+
+
+biodegrad_crossing %>%
+  filter(Enrichment != "CTRL\nmicrobes") %>%
+  group_by(DOMSource) %>%
+  summarise(max(CO2Accum_mgCL))
 ```
 
 ## Figure S3
