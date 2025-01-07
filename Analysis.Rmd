@@ -539,9 +539,8 @@ deltaDOC$Enrichment <- factor(deltaDOC$Enrichment,
                              levels = paste0(c("CTRL", "SRFA", "ES", "CHLOR"), 
                                              " microbes"))
 
-#a <-
-  ggplot(data = deltaDOC #%>% filter(Enrichment != "CTRL\nmicrobes")
-         , 
+a <-
+  ggplot(data = deltaDOC %>% filter(Enrichment != "CTRL microbes"), 
        aes(x = DOMSource, y = deltaDOC_mgCL)) +
   # Overlay points
   geom_jitter(aes(shape = Enrichment, color = DOMSource), 
@@ -1135,8 +1134,50 @@ knitr::include_graphics("images/Figure_S1.png")
 ```
 
 ## Figure S2
+```{r FigS2, fig.width=4, fig.height=5}
+# Rename "CTRL"
+deltaDOC$Enrichment <- plyr::revalue(deltaDOC$Enrichment, 
+                                     c("CTRL microbes" = "Reference"))
 
-```{r FigS2, fig.width=8, fig.height=8}
+ggplot(data = deltaDOC, 
+       aes(x = DOMSource, y = deltaDOC_mgCL)) +
+  # Overlay points
+  geom_jitter(aes(shape = Enrichment, color = DOMSource), 
+              size = 2.5, width = 0.25, alpha = 0.5) +
+  stat_summary(aes(fill = DOMSource), geom = "pointrange", fun.data = mean_se,
+               size = 0.75, shape = 23) +
+  scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
+                               "SRFA"="#2E4756"), 
+                    guide = "none") +
+  scale_fill_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
+                               "SRFA"="#2E4756"), 
+                    guide = "none") +
+  # Theme adjustments
+  theme_minimal() + labs(tag = "a") +
+  xlab("DOM source") + ylab(expression(Delta*"DOC (mg-C"~L^{-1}*")")) +
+  scale_shape_manual(values = c(c(3, 16, 17, 15))) +
+  guides(shape = guide_legend(theme = theme(legend.title = 
+                                              element_text(hjust = 0.5)))) +
+  theme(axis.text = element_text(color = "black", size = 10),
+        legend.key.size = unit(0.3, "cm"),
+        legend.title = element_text(size = 10),
+        strip.text = element_text(size = 10),
+        legend.text = element_text(size = 8),
+        legend.position = c(0.75,0.9), 
+        legend.direction = "vertical",
+        legend.justification = c(0.5,0.5),
+        plot.background = element_rect(fill = "white", color = NA))
+ggsave(file = "figures/Figure_S2.png", width = 4, height = 5, 
+       dpi = 300, units = "in")
+
+# Revert name
+deltaDOC$Enrichment <- plyr::revalue(deltaDOC$Enrichment, 
+                                     c("Reference" = "CTRL microbes"))
+```
+
+## Figure S3
+
+```{r FigS3, fig.width=5, fig.height=5}
 ### Plot #######################################################################
 ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
   # Facet based on DOM source and microbe addition
@@ -1183,11 +1224,11 @@ ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
         legend.direction = "vertical", 
         legend.background = element_rect(color = "black"))
 
-ggsave(file = "figures/Figure_S2.png", width = 5, height = 5, 
+ggsave(file = "figures/Figure_S3.png", width = 5, height = 5, 
        dpi = 300, units = "in")
 ```
 
-```{r FigS2 stats}
+```{r FigS3 stats, eval=F}
 biodegrad_crossing %>%
   filter(Enrichment != "CTRL\nmicrobes") %>%
   group_by(DOMSource) %>%
@@ -1203,18 +1244,15 @@ biodegrad_crossing %>%
   group_by(DOMSource) %>%
   summarise(max(CO2Accum_mgCL))
 
-
-
-
 biodegrad_crossing %>%
   filter(Enrichment != "CTRL\nmicrobes") %>%
   group_by(DOMSource) %>%
   summarise(max(CO2Accum_mgCL))
 ```
 
-## Figure S3
+## Figure S4
 
-```{r FigS3, fig.width=8, fig.height=8}
+```{r FigS4, fig.width=8, fig.height=8}
 ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
   # Facet based on DOM source and microbe addition
   facet_grid(cols = vars(DOMSource),
@@ -1263,13 +1301,13 @@ ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
         legend.direction = "vertical", 
         legend.background = element_rect(color = "black"))
 
-ggsave(file = "figures/Figure_S3.png", width = 5, height = 5, 
+ggsave(file = "figures/Figure_S4.png", width = 5, height = 5, 
        dpi = 300, units = "in")
 ```
 
-## Figure S4
+## Figure S5
 
-```{r FigS4, fig.width=8, fig.height=8}
+```{r FigS5, fig.width=8, fig.height=8}
 ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
   # Facet based on DOM source and microbe addition
   facet_grid(cols = vars(DOMSource),
@@ -1316,13 +1354,13 @@ ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
         plot.background = element_rect(fill = "white", color = NA),
         legend.position = "none")
 
-ggsave(file = "figures/Figure_S4.png", width = 6, height = 6, 
+ggsave(file = "figures/Figure_S5.png", width = 6, height = 6, 
        dpi = 300, units = "in")
 ```
 
-## Figure S5
+## Figure S6
 
-```{r FigS5, fig.width=8, fig.height=8}
+```{r FigS6, fig.width=8, fig.height=8}
 ## Plot ########################################################################
 # Flannel plot of biodegradability measurements
 ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
@@ -1372,109 +1410,8 @@ ggplot(data = biodegrad_crossing %>% filter(Enrichment != "CTRL\nmicrobes")) +
         legend.direction = "vertical", 
         legend.background = element_rect(color = "black"))
 
-ggsave(file = "figures/Figure_S5.png", width =5, height = 5, 
+ggsave(file = "figures/Figure_S6.png", width =5, height = 5, 
        dpi = 300, units = "in")
-```
-
-## Figure S6
-
-```{r FigS6, fig.height=6, fig.width=7.5}
-# delta DOC ####################################################################
-a <-
-  ggplot(data = deltaDOC_CTRL, 
-       aes(x = DOMSource, y = deltaDOC_mgCL)) +
-  # Overlay points
-  geom_jitter(aes(shape = Enrichment, fill = DOMSource, color = DOMSource), 
-              size = 2.5, width = 0.25) +
-  # Shape and color scales
-  scale_fill_manual(values = c("CHLOR microbes" = "#D84727", "CHLOR" = "#D84727",
-                               "ES microbes" = "#FFB000", "ES" = "#FFB000",
-                               "SRFA microbes"="#2E4756", "SRFA"="#2E4756"), 
-                    guide = "none") +
-  scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
-                               "SRFA"="#2E4756"), 
-                    guide = "none") +
-  # Theme adjustments
-  theme_minimal() + labs(tag = "a") +
-  coord_cartesian(ylim = c(-15, 2)) +
-  xlab("DOM source") + ylab(expression(Delta*"DOC (mg-C"~L^{-1}*")")) +
-  scale_shape_manual(values = c(c(21, 24, 22))) +
-  guides(shape = guide_legend(theme = theme(legend.title = 
-                                              element_text(hjust = 0.5)))) +
-  theme(axis.text = element_text(color = "black", size = 10),
-        legend.position = "none")
-
-# Biodegradability #############################################################
-b <-
-  ggplot(data = biodegrad_crossing_interp %>% 
-         filter(Time_hrs %in% c(24, 72, 7*24, 10*24) &
-                  Enrichment == "CTRL\nmicrobes"),
-       aes(y = biodegrad_perc, x = DOMSource)) +
-  # Facet based on DOM source and microbe addition
-  facet_grid(cols = vars(factor(paste0(Time_hrs/24, " day(s)"),
-                                levels = c("1 day(s)", "3 day(s)",
-                                           "7 day(s)", "10 day(s)")))) +
-  # Add lines for concentrations
-  geom_jitter(aes(shape = Enrichment, fill = DOMSource, color = DOMSource), 
-              size = 2.5, width = 0.25) +
-  coord_cartesian(ylim = c(0, 50)) +
-  # Shape and color scales
-  scale_fill_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
-                               "SRFA"="#2E4756", "CHLOR\nmicrobes" = "#D84727",
-                               "ES\nmicrobes" = "#FFB000", 
-                               "SRFA\nmicrobes"="#2E4756")) +
-  scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
-                               "SRFA"="#2E4756", "CHLOR\nmicrobes" = "#D84727",
-                               "ES\nmicrobes" = "#FFB000", 
-                               "SRFA\nmicrobes"="#2E4756")) +
-  scale_shape_manual(values = c(c(21, 24, 22))) +
-  # Theme adjustments
-  labs(tag = "b") + theme_minimal() +  
-  xlab("DOM source") +
-  ylab("C biodegradability (%)") +
-  theme(axis.text = element_text(color = "black", size = 8),
-        panel.spacing = unit(1, "lines"), legend.position = "none",
-        strip.text = element_text(size = 10))
-
-# Removal rate #################################################################
-c <-
-  ggplot(data = biodegrad_crossing_interp %>% 
-         filter(Time_hrs %in% c(24, 72, 7*24, 10*24) &
-                  Enrichment == "CTRL\nmicrobes"),
-       aes(y = k_C_d, x = DOMSource)) +
-  # Facet based on DOM source and microbe addition
-  facet_grid(cols = vars(factor(paste0(Time_hrs/24, " day(s)"),
-                                levels = c("1 day(s)", "3 day(s)",
-                                           "7 day(s)", "10 day(s)")))) +
-  # Add lines for concentrations
-  geom_jitter(aes(shape = Enrichment, fill = DOMSource, color = DOMSource), 
-              size = 2.5, width = 0.25) +
-  # Shape and color scales
-  scale_fill_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
-                               "SRFA"="#2E4756", "CHLOR\nmicrobes" = "#D84727",
-                               "ES\nmicrobes" = "#FFB000", 
-                               "SRFA\nmicrobes"="#2E4756")) +
-    scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
-                               "SRFA"="#2E4756", "CHLOR\nmicrobes" = "#D84727",
-                               "ES\nmicrobes" = "#FFB000",
-                               "SRFA\nmicrobes"="#2E4756")) +
-  scale_shape_manual(values = c(c(21, 24, 22))) +
-  # Theme adjustments
-  labs(tag = "c") + theme_minimal() +  
-  coord_cartesian(ylim = c(0, 0.15)) +
-  guides(fill = guide_legend(override.aes = list(shape=21))) +
-  xlab("DOM source") +
-  ylab(expression("C removal rate ("~d^{-1}*")")) +
-  theme(axis.text = element_text(color = "black", size = 8),
-        panel.spacing = unit(1, "lines"), legend.position = "none",
-        strip.text = element_text(size = 10),
-        legend.background = element_rect(color = "black"))
-
-layoutGrid <- rbind(c(1,1,2,2,2,2),
-                    c(1,1,3,3,3,3))
-grob <- grid.arrange(a, b, c, layout_matrix = layoutGrid)
-ggsave(grob, file = "figures/Figure_S6.png", 
-       height = 6, width = 7.5, units = "in", dpi = 300)
 ```
 
 ## Table S1
