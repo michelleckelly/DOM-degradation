@@ -107,6 +107,24 @@ massSpec %>%
 # Kruskall-wallis as groups are unbalanced
 kruskal.test(O_C ~ DOMSource, data = massSpec)
 kruskal.test(H_C ~ DOMSource, data = massSpec)
+
+# For later in methods - initial nutrient concentrations
+initPlot <-
+  nutInits %>%
+  filter(BlankOrSample == "sample" & Enrichment != "CTRL")
+
+# Stats test: Were initial DOC conc different between samples?
+modl <- aov(initial_DOC_mgCL ~ DOMSource * Enrichment, data = initPlot)
+summary(modl)
+
+# Was initial TDN different?
+modl <- aov(initial_TDN_mgNL ~ DOMSource * Enrichment, data = initPlot)
+summary(modl)
+
+# Average concentrations
+initPlot %>%
+  summarise(mean(initial_DOC_mgCL), sd(initial_DOC_mgCL),
+            mean(initial_TDN_mgNL), sd(initial_TDN_mgNL))
 ```
 
 ```{r Fig2plot, fig.height=5, fig.width=7}
@@ -171,22 +189,42 @@ d <-
   scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
                                "SRFA"="#2E4756"), guide = "none") +
   # Theme adjustments
-  theme_minimal() + labs(tag = "d") + coord_cartesian(ylim = c(0, 1)) +
+  theme_minimal() + labs(tag = "d") + 
+  coord_cartesian(ylim = c(0.25, 0.75)) +
   xlab("DOM Source") + ylab(expression("BIX")) +
   scale_shape_manual(values = c(21, 24)) +
-  theme(lot.background = element_rect(fill = "white", color = NA),
+  theme(plot.background = element_rect(fill = "white", color = NA),
+        legend.position = "none")
+# E2:E3
+e <- 
+  ggplot(data = eem %>% 
+         filter(BlankOrSample %in% c("T0") &
+                  DayOfExperiment == 0),
+       aes(x = DOMSource, y = e2e3)) +
+  geom_point(aes(color = DOMSource), shape = 16, size = 3) +
+  scale_fill_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
+                               "SRFA"="#2E4756"),  guide = "none") +
+  scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
+                               "SRFA"="#2E4756"), guide = "none") +
+  # Theme adjustments
+  theme_minimal() + labs(tag = "e") +
+  coord_cartesian(ylim = c(0, 125)) +
+  xlab("DOM Source") + ylab(expression("E2:E3")) +
+  scale_shape_manual(values = c(21, 24)) +
+  theme(plot.background = element_rect(fill = "white", color = NA),
         legend.position = "none")
 
-lay <- rbind(c(1,2),
-             c(1,2),
-             c(1,2),
-             c(3,4),
-             c(3,4))
-grob <- grid.arrange(a, b, c, d, layout_matrix = lay)
+
+lay <- rbind(c(1,1,1,2,2,2),
+             c(1,1,1,2,2,2),
+             c(1,1,1,2,2,2),
+             c(3,3,4,4,5,5),
+             c(3,3,4,4,5,5))
+grob <- grid.arrange(a, b, c, d,e, layout_matrix = lay)
 
 # Save plot
 ggsave(grob, file = "figures/Figure_2.png", 
-       width = 6, height = 4.5, units = "in", dpi = 300)
+       width = 6, height = 5, units = "in", dpi = 300)
 ```
 
 ## Figure 3
@@ -539,20 +577,31 @@ deltaDOC$Enrichment <- factor(deltaDOC$Enrichment,
                              levels = paste0(c("CTRL", "SRFA", "ES", "CHLOR"), 
                                              " microbes"))
 
+# Calculate summary statistics
+deltaDOC_summary <- 
+  deltaDOC %>% 
+  filter(Enrichment != "CTRL microbes") %>%
+  group_by(DOMSource) %>%
+  summarise(deltaDOC_mgCL_mean = mean(deltaDOC_mgCL),
+            deltaDOC_mgCL_sd = sd(deltaDOC_mgCL))
+
 a <-
-  ggplot(data = deltaDOC %>% filter(Enrichment != "CTRL microbes"), 
-       aes(x = DOMSource, y = deltaDOC_mgCL)) +
-  # Overlay points
-  geom_jitter(aes(shape = Enrichment, color = DOMSource), 
-              size = 2.5, width = 0.25, alpha = 0.5) +
-  stat_summary(aes(fill = DOMSource), geom = "pointrange", fun.data = mean_se,
-               size = 0.75, shape = 23) +
+  ggplot() +
+  # All points
+  geom_jitter(data = deltaDOC %>% filter(Enrichment != "CTRL microbes"), 
+              aes(x = DOMSource, y = deltaDOC_mgCL, shape = Enrichment, 
+                  color = DOMSource), size = 2.5, width = 0.4) +
+  # Summary points
+  geom_linerange(data = deltaDOC_summary, 
+             aes(x = DOMSource, 
+                 ymin = deltaDOC_mgCL_mean - deltaDOC_mgCL_sd,
+                 ymax = deltaDOC_mgCL_mean + deltaDOC_mgCL_sd,
+                 color = DOMSource),
+             linewidth = 4) +
+  geom_point(data = deltaDOC_summary, 
+             aes(x = DOMSource, y = deltaDOC_mgCL_mean),
+             size = 2, shape = 16, color = "white") +
   # Shape and color scales
-  #scale_fill_manual(values = c("CHLOR microbes" = "#D84727", "CHLOR" = "#D84727",
-   #                            "ES microbes" = "#FFB000", "ES" = "#FFB000",
-    #                           "SRFA microbes"="#2E4756", "SRFA"="#2E4756"
-     #                          ), 
-      #              guide = "none") +
   scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
                                "SRFA"="#2E4756"), 
                     guide = "none") +
@@ -561,16 +610,17 @@ a <-
                     guide = "none") +
   # Theme adjustments
   theme_minimal() + labs(tag = "a") +
-  xlab("DOM source") + ylab(expression(Delta*"DOC (mg-C"~L^{-1}*")")) +
-  scale_shape_manual(values = c(c(3, 16, 17, 15))) +
+  xlab("DOM source") + 
+  ylab(expression(Delta*"DOC (mg-C"~L^{-1}*")")) +
+  scale_shape_manual(values = c(c(21, 24, 22))) +
   guides(shape = guide_legend(theme = theme(legend.title = 
                                               element_text(hjust = 0.5)))) +
   theme(axis.text = element_text(color = "black", size = 10),
-        legend.key.size = unit(0.3, "cm"),
+        legend.key.size = unit(0.2, "cm"),
         legend.title = element_text(size = 10),
         strip.text = element_text(size = 10),
         legend.text = element_text(size = 8),
-        legend.position = c(0.75,0.9), 
+        legend.position = c(0.35,0.06), 
         legend.direction = "vertical",
         legend.justification = c(0.5,0.5))
 
@@ -584,27 +634,53 @@ biodegrad_crossing_interp$DOMSource <-
   factor(biodegrad_crossing_interp$DOMSource, 
          levels = c("SRFA", "ES", "CHLOR"))
 
+# Calculate summary statistics
+biodegrad_crossing_interp_summary <- 
+  biodegrad_crossing_interp %>% 
+  filter(Time_hrs %in% c(24, 72, 7*24, 10*24) &
+           Enrichment != "CTRL\nmicrobes") %>%
+  ungroup() %>%
+  group_by(DOMSource, Time_hrs) %>%
+  summarise(biodegrad_perc_mean = mean(biodegrad_perc),
+            biodegrad_perc_sd = sd(biodegrad_perc),
+            k_C_d_mean = mean(k_C_d),
+            k_C_d_sd = sd(k_C_d)) %>%
+  mutate(facetCols = factor(paste0(Time_hrs/24, " day(s)"),
+                            levels = c("1 day(s)", "3 day(s)",
+                                       "7 day(s)", "10 day(s)")))
+# Add facet columm
+biodegrad_crossing_interp <- 
+  biodegrad_crossing_interp %>% 
+  mutate(facetCols = factor(paste0(Time_hrs/24, " day(s)"),
+                            levels = c("1 day(s)", "3 day(s)",
+                                       "7 day(s)", "10 day(s)")))
+  
 b <-
-  ggplot(data = biodegrad_crossing_interp %>% 
-         filter(Time_hrs %in% c(24, 72, 7*24, 10*24) &
-                  Enrichment != "CTRL\nmicrobes"),
-       aes(y = biodegrad_perc, x = DOMSource)) +
+  ggplot() +
   # Facet based on DOM source and microbe addition
-  facet_grid(cols = vars(factor(paste0(Time_hrs/24, " day(s)"),
-                                levels = c("1 day(s)", "3 day(s)",
-                                           "7 day(s)", "10 day(s)")))) +
-  # Add lines for concentrations
-  geom_jitter(aes(shape = Enrichment, fill = DOMSource, color = DOMSource), 
-              size = 2.5, width = 0.25, alpha = 0.5) +
-  stat_summary(aes(fill = DOMSource), geom = "pointrange", fun.data = mean_se,
-               size = 0.75, shape = 23) +
+  facet_grid(cols = vars(facetCols)) +
+  # All points
+  geom_jitter(data = biodegrad_crossing_interp %>% 
+                filter(Time_hrs %in% c(24, 72, 7*24, 10*24) &
+                         Enrichment != "CTRL\nmicrobes"), 
+              aes(x = DOMSource, y = biodegrad_perc, 
+                  shape = Enrichment, color = DOMSource), 
+              size = 2.5, width = 0.4) +
+  # Summary points
+  geom_linerange(data = biodegrad_crossing_interp_summary, 
+             aes(x = DOMSource, 
+                 ymin = biodegrad_perc_mean - biodegrad_perc_sd,
+                 ymax = biodegrad_perc_mean + biodegrad_perc_sd,
+                 color = DOMSource),
+             linewidth = 4) +
+  geom_point(data = biodegrad_crossing_interp_summary, 
+             aes(x = DOMSource, y = biodegrad_perc_mean),
+             size = 2, shape = 16, color = "white") +
   # Shape and color scales
-  scale_fill_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
-                               "SRFA"="#2E4756", "CHLOR\nmicrobes" = "#D84727",
-                               "ES\nmicrobes" = "#FFB000", 
-                               "SRFA\nmicrobes"="#2E4756")) +
-  scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
-                               "SRFA"="#2E4756", "CHLOR\nmicrobes" = "#D84727",
+  scale_color_manual(values = c("CHLOR" = "#D84727", 
+                                "ES" = "#FFB000",
+                               "SRFA"="#2E4756", 
+                               "CHLOR\nmicrobes" = "#D84727",
                                "ES\nmicrobes" = "#FFB000", 
                                "SRFA\nmicrobes"="#2E4756")) +
   scale_shape_manual(values = c(c(21, 24, 22))) +
@@ -614,45 +690,50 @@ b <-
   ylab("C biodegradability (%)") +
   theme(axis.text = element_text(color = "black", size = 8),
         panel.spacing = unit(1, "lines"), legend.position = "none",
-        strip.text = element_text(size = 10))
+        strip.text = element_text(size = 10),
+        panel.grid.minor.y = element_blank())
 
 # Removal rate #################################################################
 c <-
-  ggplot(data = biodegrad_crossing_interp %>% 
-         filter(Time_hrs %in% c(24, 72, 7*24, 10*24) &
-                  Enrichment != "CTRL\nmicrobes"),
-       aes(y = k_C_d, x = DOMSource)) +
+  ggplot() +
   # Facet based on DOM source and microbe addition
-  facet_grid(cols = vars(factor(paste0(Time_hrs/24, " day(s)"),
-                                levels = c("1 day(s)", "3 day(s)",
-                                           "7 day(s)", "10 day(s)")))) +
-  # Add lines for concentrations
-  geom_jitter(aes(shape = Enrichment, fill = DOMSource, color = DOMSource), 
-              size = 2.5, width = 0.25, alpha = 0.5) +
-  stat_summary(aes(fill = DOMSource), geom = "pointrange", fun.data = mean_se,
-               size = 0.75, shape = 23) +
+  facet_grid(cols = vars(facetCols)) +
+  # All points
+  geom_jitter(data = biodegrad_crossing_interp %>% 
+                filter(Time_hrs %in% c(24, 72, 7*24, 10*24) &
+                         Enrichment != "CTRL\nmicrobes"), 
+              aes(x = DOMSource, y = k_C_d, 
+                  shape = Enrichment, color = DOMSource), 
+              size = 2.5, width = 0.4) +
+  # Summary points
+  geom_linerange(data = biodegrad_crossing_interp_summary, 
+             aes(x = DOMSource, 
+                 ymin = k_C_d_mean - k_C_d_sd,
+                 ymax = k_C_d_mean + k_C_d_sd,
+                 color = DOMSource),
+             linewidth = 4) +
+  geom_point(data = biodegrad_crossing_interp_summary, 
+             aes(x = DOMSource, y = k_C_d_mean),
+             size = 2, shape = 16, color = "white") +
   # Shape and color scales
-  scale_fill_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
-                               "SRFA"="#2E4756", "CHLOR\nmicrobes" = "#D84727",
+  scale_color_manual(values = c("CHLOR" = "#D84727", 
+                                "ES" = "#FFB000",
+                               "SRFA"="#2E4756", 
+                               "CHLOR\nmicrobes" = "#D84727",
                                "ES\nmicrobes" = "#FFB000", 
-                               "SRFA\nmicrobes"="#2E4756")) +
-    scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
-                               "SRFA"="#2E4756", "CHLOR\nmicrobes" = "#D84727",
-                               "ES\nmicrobes" = "#FFB000",
                                "SRFA\nmicrobes"="#2E4756")) +
   scale_shape_manual(values = c(c(21, 24, 22))) +
   # Theme adjustments
-  labs(tag = "c") + theme_minimal() +  
-  guides(fill = guide_legend(override.aes = list(shape=21))) +
+  labs(tag = "b") + theme_minimal() +  
   xlab("DOM source") +
-  ylab(expression("C removal rate ("~d^{-1}*")")) +
+  ylab("C biodegradability (%)") +
   theme(axis.text = element_text(color = "black", size = 8),
         panel.spacing = unit(1, "lines"), legend.position = "none",
         strip.text = element_text(size = 10),
-        legend.background = element_rect(color = "black"))
+        panel.grid.minor.y = element_blank())
 
-layoutGrid <- rbind(c(1,1,2,2,2,2),
-                    c(1,1,3,3,3,3))
+layoutGrid <- rbind(c(1,1,2,2,2,2,2),
+                    c(1,1,3,3,3,3,3))
 grob <- grid.arrange(a, b, c, layout_matrix = layoutGrid)
 ggsave(grob, file = "figures/Figure_3.png", 
        height = 6, width = 7.5, units = "in", dpi = 300)
