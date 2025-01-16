@@ -1031,6 +1031,21 @@ maxDur %>%
   ungroup() %>% 
   summarise(mean(maxTime), sd(maxTime))
 
+# Avg initial DOC
+synth_initDOC <- 
+  synthesis_fw %>%
+  ungroup() %>%
+  select(Citation, System, Site, Sample, DOCi_mgL) %>%
+  distinct() 
+# Overall mean
+synth_initDOC %>%
+  summarise(mean(DOCi_mgL), sd(DOCi_mgL),
+            min(DOCi_mgL), max(DOCi_mgL))
+# Differences between Systems?
+t.test(DOCi_mgL ~ System, data = synth_initDOC)
+
+mean(synth_deltaDOC$)
+
 # Avg delta DOC
 t.test(deltaDOC_mgCL ~ System, data = synth_deltaDOC)
 mean(synth_deltaDOC$deltaDOC_mgCL)
