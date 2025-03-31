@@ -1,173 +1,422 @@
 CollectionDate,Experiment,Enrichment,DOMSource,BlankOrSample,Replicate,DayOfExperiment,FilteredOrUnfiltered,BottleNum,Analysis,Concentration,units,notes,sourceDatasheet
-2022-09-06,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,NA,0,filtered,2022-09-06 CHLOR/CHLOR T0 DOC,DOC,17.8,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CHLOR,ES,sample,NA,0,filtered,2022-09-06 CHLOR/ES T0 DOC,DOC,16.48,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CHLOR,SRFA,sample,NA,0,filtered,2022-09-06 CHLOR/SFRA T0 DOC,DOC,17.04,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CTRL,CHLOR,sample,NA,0,filtered,2022-09-06 CTRL/CHLOR T0 DOC,DOC,20.43,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CTRL,ES,sample,NA,0,filtered,2022-09-06 CTRL/ES T0 DOC,DOC,18.73,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CTRL,SRFA,sample,NA,0,filtered,2022-09-06 CTRL/SFRA T0 DOC,DOC,19.44,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,ES,CHLOR,sample,NA,0,filtered,2022-09-06 ES/CHLOR T0 DOC,DOC,19.72,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,ES,ES,sample,NA,0,filtered,2022-09-06 ES/ES T0 DOC,DOC,18.68,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,ES,SRFA,sample,NA,0,filtered,2022-09-06 ES/SFRA T0 DOC,DOC,NA,mg C / L,"This sample didn't have enough volume to be analyzed - it was included in the run but no peaks were generated, so values omitted here",AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,FILTER BLANK,FILTER BLANK,filter blank,NA,0,filtered,2022-09-06 FILTER BLANK T0 DOC,DOC,<LOD,mg C / L,<LOD,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,SRFA,CHLOR,sample,NA,0,filtered,2022-09-06 SFRA/CHLOR T0 DOC,DOC,23.12,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,SRFA,ES,sample,NA,0,filtered,2022-09-06 SFRA/ES T0 DOC,DOC,20.4,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,SRFA,SRFA,sample,NA,0,filtered,2022-09-06 SFRA/SFRA T0 DOC,DOC,20.85,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,NA,0,filtered,2022-09-06 CHLOR/CHLOR T0 DOC,TDN,296.8,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CHLOR,ES,sample,NA,0,filtered,2022-09-06 CHLOR/ES T0 DOC,TDN,311.6,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CHLOR,SRFA,sample,NA,0,filtered,2022-09-06 CHLOR/SFRA T0 DOC,TDN,317.3,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CTRL,CHLOR,sample,NA,0,filtered,2022-09-06 CTRL/CHLOR T0 DOC,TDN,310.4,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CTRL,ES,sample,NA,0,filtered,2022-09-06 CTRL/ES T0 DOC,TDN,308.9,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,CTRL,SRFA,sample,NA,0,filtered,2022-09-06 CTRL/SFRA T0 DOC,TDN,295.4,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,ES,CHLOR,sample,NA,0,filtered,2022-09-06 ES/CHLOR T0 DOC,TDN,305.1,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,ES,ES,sample,NA,0,filtered,2022-09-06 ES/ES T0 DOC,TDN,315.2,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,ES,SRFA,sample,NA,0,filtered,2022-09-06 ES/SFRA T0 DOC,TDN,NA,mg N / L,"This sample didn't have enough volume to be analyzed - it was included in the run but no peaks were generated, so values omitted here",AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,FILTER BLANK,FILTER BLANK,filter blank,NA,0,filtered,2022-09-06 FILTER BLANK T0 DOC,TDN,<LOD,mg N / L,<LOD,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,SRFA,CHLOR,sample,NA,0,filtered,2022-09-06 SFRA/CHLOR T0 DOC,TDN,288,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,SRFA,ES,sample,NA,0,filtered,2022-09-06 SFRA/ES T0 DOC,TDN,308.3,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-06,DOM Crossing Experiment 1,SRFA,SRFA,sample,NA,0,filtered,2022-09-06 SFRA/SFRA T0 DOC,TDN,300.4,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,1,14,filtered,2022-09-20 CHLOR/CHLOR 1 DOC,DOC,2.925,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,2,14,filtered,2022-09-20 CHLOR/CHLOR 2 DOC,DOC,2.752,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,3,14,filtered,2022-09-20 CHLOR/CHLOR 3 DOC,DOC,2.784,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,ES,sample,1,14,filtered,2022-09-20 CHLOR/ES 1 DOC,DOC,8.18,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,ES,sample,2,14,filtered,2022-09-20 CHLOR/ES 2 DOC,DOC,8.199,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,ES,sample,3,14,filtered,2022-09-20 CHLOR/ES 3 DOC,DOC,11.04,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,SRFA,sample,1,14,filtered,2022-09-20 CHLOR/SFRA 1 DOC,DOC,17.56,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,SRFA,sample,2,14,filtered,2022-09-20 CHLOR/SFRA 2 DOC,DOC,17.8,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,SRFA,sample,3,14,filtered,2022-09-20 CHLOR/SFRA 3 DOC,DOC,17.97,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CTRL,CHLOR,sample,1,14,filtered,2022-09-20 CTRL/CHLOR 1 DOC,DOC,8.322,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CTRL,ES,sample,1,14,filtered,2022-09-20 CTRL/ES 1 DOC,DOC,14.29,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CTRL,SRFA,sample,1,14,filtered,2022-09-20 CTRL/SFRA 1 DOC,DOC,20.6,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,CHLOR,sample,1,14,filtered,2022-09-20 ES/CHLOR 1 DOC,DOC,3.801,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,CHLOR,sample,2,14,filtered,2022-09-20 ES/CHLOR 2 DOC,DOC,3.647,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,CHLOR,sample,3,14,filtered,2022-09-20 ES/CHLOR 3 DOC,DOC,4.027,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,ES,sample,1,14,filtered,2022-09-20 ES/ES 1 DOC,DOC,9.116,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,ES,sample,2,14,filtered,2022-09-20 ES/ES 2 DOC,DOC,8.883,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,ES,sample,3,14,filtered,2022-09-20 ES/ES 3 DOC,DOC,11.72,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,SRFA,sample,1,14,filtered,2022-09-20 ES/SFRA 1 DOC,DOC,17.91,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,SRFA,sample,2,14,filtered,2022-09-20 ES/SFRA 2 DOC,DOC,18.58,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,SRFA,sample,3,14,filtered,2022-09-20 ES/SFRA 3 DOC,DOC,19.64,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,CHLOR,sample,1,14,filtered,2022-09-20 SFRA/CHLOR 1 DOC,DOC,7.859,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,CHLOR,sample,2,14,filtered,2022-09-20 SFRA/CHLOR 2 DOC,DOC,7.132,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,CHLOR,sample,3,14,filtered,2022-09-20 SFRA/CHLOR 3 DOC,DOC,7.338,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,ES,sample,1,14,filtered,2022-09-20 SFRA/ES 1 DOC,DOC,14.19,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,ES,sample,2,14,filtered,2022-09-20 SFRA/ES 2 DOC,DOC,17.4,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,ES,sample,3,14,filtered,2022-09-20 SFRA/ES 3 DOC,DOC,13.7,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,SRFA,sample,1,14,filtered,2022-09-20 SFRA/SFRA 1 DOC,DOC,21.58,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,SRFA,sample,2,14,filtered,2022-09-20 SFRA/SFRA 2 DOC,DOC,21.68,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,SRFA,sample,3,14,filtered,2022-09-20 SFRA/SFRA 3 DOC,DOC,21.7,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,1,14,filtered,2022-09-20 CHLOR/CHLOR 1 DOC,TDN,347.9,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,2,14,filtered,2022-09-20 CHLOR/CHLOR 2 DOC,TDN,348.7,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,3,14,filtered,2022-09-20 CHLOR/CHLOR 3 DOC,TDN,352.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,ES,sample,1,14,filtered,2022-09-20 CHLOR/ES 1 DOC,TDN,319.6,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,ES,sample,2,14,filtered,2022-09-20 CHLOR/ES 2 DOC,TDN,329.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,ES,sample,3,14,filtered,2022-09-20 CHLOR/ES 3 DOC,TDN,324.9,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,SRFA,sample,1,14,filtered,2022-09-20 CHLOR/SFRA 1 DOC,TDN,336.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,SRFA,sample,2,14,filtered,2022-09-20 CHLOR/SFRA 2 DOC,TDN,337.9,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CHLOR,SRFA,sample,3,14,filtered,2022-09-20 CHLOR/SFRA 3 DOC,TDN,337.4,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CTRL,CHLOR,sample,1,14,filtered,2022-09-20 CTRL/CHLOR 1 DOC,TDN,358.7,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CTRL,ES,sample,1,14,filtered,2022-09-20 CTRL/ES 1 DOC,TDN,326.4,mg N / L,TAIL,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,CTRL,SRFA,sample,1,14,filtered,2022-09-20 CTRL/SFRA 1 DOC,TDN,333.1,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,CHLOR,sample,1,14,filtered,2022-09-20 ES/CHLOR 1 DOC,TDN,340.4,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,CHLOR,sample,2,14,filtered,2022-09-20 ES/CHLOR 2 DOC,TDN,335.5,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,CHLOR,sample,3,14,filtered,2022-09-20 ES/CHLOR 3 DOC,TDN,334.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,ES,sample,1,14,filtered,2022-09-20 ES/ES 1 DOC,TDN,325.8,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,ES,sample,2,14,filtered,2022-09-20 ES/ES 2 DOC,TDN,329.2,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,ES,sample,3,14,filtered,2022-09-20 ES/ES 3 DOC,TDN,313.1,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,SRFA,sample,1,14,filtered,2022-09-20 ES/SFRA 1 DOC,TDN,309.2,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,SRFA,sample,2,14,filtered,2022-09-20 ES/SFRA 2 DOC,TDN,323.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,ES,SRFA,sample,3,14,filtered,2022-09-20 ES/SFRA 3 DOC,TDN,328,mg N / L,TAIL,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,CHLOR,sample,1,14,filtered,2022-09-20 SFRA/CHLOR 1 DOC,TDN,352.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,CHLOR,sample,2,14,filtered,2022-09-20 SFRA/CHLOR 2 DOC,TDN,352.2,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,CHLOR,sample,3,14,filtered,2022-09-20 SFRA/CHLOR 3 DOC,TDN,344,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,ES,sample,1,14,filtered,2022-09-20 SFRA/ES 1 DOC,TDN,327.2,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,ES,sample,2,14,filtered,2022-09-20 SFRA/ES 2 DOC,TDN,327.9,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,ES,sample,3,14,filtered,2022-09-20 SFRA/ES 3 DOC,TDN,338.2,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,SRFA,sample,1,14,filtered,2022-09-20 SFRA/SFRA 1 DOC,TDN,317,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,SRFA,sample,2,14,filtered,2022-09-20 SFRA/SFRA 2 DOC,TDN,335.7,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 1,SRFA,SRFA,sample,3,14,filtered,2022-09-20 SFRA/SFRA 3 DOC,TDN,337.7,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,NA,0,filtered,2022-09-20 CHLOR/CHLOR T0 DOC,DOC,12.87,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CHLOR,ES,sample,NA,0,filtered,2022-09-20 CHLOR/ES T0 DOC,DOC,16.04,mg C / L,"Note on bottle: ""THIS SAMPLE MAY BE ES/CHLOR""",AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CHLOR,SRFA,sample,NA,0,filtered,2022-09-20 CHLOR/SFRA T0 DOC,DOC,18.08,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CTRL,CHLOR,sample,NA,0,filtered,2022-09-20 CTRL/CHLOR T0 DOC,DOC,14.98,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CTRL,ES,sample,NA,0,filtered,2022-09-20 CTRL/ES T0 DOC,DOC,19.99,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CTRL,SRFA,sample,NA,0,filtered,2022-09-20 CTRL/SFRA T0 DOC,DOC,21.32,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,ES,CHLOR,sample,NA,0,filtered,2022-09-20 ES/CHLOR T0 DOC,DOC,12.67,mg C / L,"Note on bottle: ""THIS SAMPLE MAY BE CHLOR/ES""",AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,ES,ES,sample,NA,0,filtered,2022-09-20 ES/ES T0 DOC,DOC,17.59,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,ES,SRFA,sample,NA,0,filtered,2022-09-20 ES/SFRA T0 DOC,DOC,18.6,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,FILTER BLANK,FILTER BLANK,filter blank,NA,0,filtered,2022-09-20 FILTER BLANK T0 DOC,DOC,4.402,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,SRFA,CHLOR,sample,NA,0,filtered,2022-09-20 SFRA/CHLOR T0 DOC,DOC,14.65,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,SRFA,ES,sample,NA,0,filtered,2022-09-20 SFRA/ES T0 DOC,DOC,18.25,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,SRFA,SRFA,sample,NA,0,filtered,2022-09-20 SFRA/SFRA T0 DOC,DOC,19.61,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,NA,0,filtered,2022-09-20 CHLOR/CHLOR T0 DOC,TDN,328,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CHLOR,ES,sample,NA,0,filtered,2022-09-20 CHLOR/ES T0 DOC,TDN,325.6,mg N / L,"Note on bottle: ""THIS SAMPLE MAY BE ES/CHLOR""",AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CHLOR,SRFA,sample,NA,0,filtered,2022-09-20 CHLOR/SFRA T0 DOC,TDN,324,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CTRL,CHLOR,sample,NA,0,filtered,2022-09-20 CTRL/CHLOR T0 DOC,TDN,332.9,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CTRL,ES,sample,NA,0,filtered,2022-09-20 CTRL/ES T0 DOC,TDN,323.5,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,CTRL,SRFA,sample,NA,0,filtered,2022-09-20 CTRL/SFRA T0 DOC,TDN,330.6,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,ES,CHLOR,sample,NA,0,filtered,2022-09-20 ES/CHLOR T0 DOC,TDN,325.8,mg N / L,"Note on bottle: ""THIS SAMPLE MAY BE CHLOR/ES""",AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,ES,ES,sample,NA,0,filtered,2022-09-20 ES/ES T0 DOC,TDN,327.1,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,ES,SRFA,sample,NA,0,filtered,2022-09-20 ES/SFRA T0 DOC,TDN,325.7,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,FILTER BLANK,FILTER BLANK,filter blank,NA,0,filtered,2022-09-20 FILTER BLANK T0 DOC,TDN,<LOD,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,SRFA,CHLOR,sample,NA,0,filtered,2022-09-20 SFRA/CHLOR T0 DOC,TDN,329.8,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,SRFA,ES,sample,NA,0,filtered,2022-09-20 SFRA/ES T0 DOC,TDN,326.1,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-09-20,DOM Crossing Experiment 2,SRFA,SRFA,sample,NA,0,filtered,2022-09-20 SFRA/SFRA T0 DOC,TDN,329.4,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,1,14,filtered,2022-10-04 CHLOR/CHLOR 1 DOC,DOC,2.819,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,2,14,filtered,2022-10-04 CHLOR/CHLOR 2 DOC,DOC,2.97,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,3,14,filtered,2022-10-04 CHLOR/CHLOR 3 DOC,DOC,2.834,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,ES,sample,1,14,filtered,2022-10-04 CHLOR/ES 1 DOC,DOC,8.485,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,ES,sample,2,14,filtered,2022-10-04 CHLOR/ES 2 DOC,DOC,8.341,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,ES,sample,3,14,filtered,2022-10-04 CHLOR/ES 3 DOC,DOC,8.122,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,SRFA,sample,1,14,filtered,2022-10-04 CHLOR/SFRA 1 DOC,DOC,17.78,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,SRFA,sample,2,14,filtered,2022-10-04 CHLOR/SFRA 2 DOC,DOC,17.37,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,SRFA,sample,3,14,filtered,2022-10-04 CHLOR/SFRA 3 DOC,DOC,17.72,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CTRL,CHLOR,sample,1,14,filtered,2022-10-04 CTRL/CHLOR 1 DOC,DOC,5.303,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CTRL,ES,sample,1,14,filtered,2022-10-04 CTRL/ES 1 DOC,DOC,12.71,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CTRL,SRFA,sample,1,14,filtered,2022-10-04 CTRL/SFRA 1 DOC,DOC,21.86,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,CHLOR,sample,1,14,filtered,2022-10-04 ES/CHLOR 1 DOC,DOC,5.219,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,CHLOR,sample,2,14,filtered,2022-10-04 ES/CHLOR 2 DOC,DOC,3.598,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,CHLOR,sample,3,14,filtered,2022-10-04 ES/CHLOR 3 DOC,DOC,3.874,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,ES,sample,1,14,filtered,2022-10-04 ES/ES 1 DOC,DOC,9.105,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,ES,sample,2,14,filtered,2022-10-04 ES/ES 2 DOC,DOC,8.676,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,ES,sample,3,14,filtered,2022-10-04 ES/ES 3 DOC,DOC,8.92,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,SRFA,sample,1,14,filtered,2022-10-04 ES/SFRA 1 DOC,DOC,18.75,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,SRFA,sample,2,14,filtered,2022-10-04 ES/SFRA 2 DOC,DOC,18.03,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,SRFA,sample,3,14,filtered,2022-10-04 ES/SFRA 3 DOC,DOC,18.97,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,CHLOR,sample,1,14,filtered,2022-10-04 SFRA/CHLOR 1 DOC,DOC,5.654,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,CHLOR,sample,2,14,filtered,2022-10-04 SFRA/CHLOR 2 DOC,DOC,5.625,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,CHLOR,sample,3,14,filtered,2022-10-04 SFRA/CHLOR 3 DOC,DOC,5.7,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,ES,sample,1,14,filtered,2022-10-04 SFRA/ES 1 DOC,DOC,11.96,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,ES,sample,2,14,filtered,2022-10-04 SFRA/ES 2 DOC,DOC,13.37,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,ES,sample,3,14,filtered,2022-10-04 SFRA/ES 3 DOC,DOC,11.46,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,SRFA,sample,1,14,filtered,2022-10-04 SFRA/SFRA 1 DOC,DOC,20.1,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,SRFA,sample,2,14,filtered,2022-10-04 SFRA/SFRA 2 DOC,DOC,21.21,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,SRFA,sample,3,14,filtered,2022-10-04 SFRA/SFRA 3 DOC,DOC,20.84,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,1,14,filtered,2022-10-04 CHLOR/CHLOR 1 DOC,TDN,336.4,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,2,14,filtered,2022-10-04 CHLOR/CHLOR 2 DOC,TDN,337.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,3,14,filtered,2022-10-04 CHLOR/CHLOR 3 DOC,TDN,340.3,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,ES,sample,1,14,filtered,2022-10-04 CHLOR/ES 1 DOC,TDN,332.5,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,ES,sample,2,14,filtered,2022-10-04 CHLOR/ES 2 DOC,TDN,333,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,ES,sample,3,14,filtered,2022-10-04 CHLOR/ES 3 DOC,TDN,331.2,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,SRFA,sample,1,14,filtered,2022-10-04 CHLOR/SFRA 1 DOC,TDN,330.2,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,SRFA,sample,2,14,filtered,2022-10-04 CHLOR/SFRA 2 DOC,TDN,329.4,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CHLOR,SRFA,sample,3,14,filtered,2022-10-04 CHLOR/SFRA 3 DOC,TDN,328.4,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CTRL,CHLOR,sample,1,14,filtered,2022-10-04 CTRL/CHLOR 1 DOC,TDN,339.4,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CTRL,ES,sample,1,14,filtered,2022-10-04 CTRL/ES 1 DOC,TDN,331.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,CTRL,SRFA,sample,1,14,filtered,2022-10-04 CTRL/SFRA 1 DOC,TDN,330.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,CHLOR,sample,1,14,filtered,2022-10-04 ES/CHLOR 1 DOC,TDN,325.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,CHLOR,sample,2,14,filtered,2022-10-04 ES/CHLOR 2 DOC,TDN,324.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,CHLOR,sample,3,14,filtered,2022-10-04 ES/CHLOR 3 DOC,TDN,322.4,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,ES,sample,1,14,filtered,2022-10-04 ES/ES 1 DOC,TDN,312.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,ES,sample,2,14,filtered,2022-10-04 ES/ES 2 DOC,TDN,316.8,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,ES,sample,3,14,filtered,2022-10-04 ES/ES 3 DOC,TDN,316.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,SRFA,sample,1,14,filtered,2022-10-04 ES/SFRA 1 DOC,TDN,314.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,SRFA,sample,2,14,filtered,2022-10-04 ES/SFRA 2 DOC,TDN,319.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,ES,SRFA,sample,3,14,filtered,2022-10-04 ES/SFRA 3 DOC,TDN,319.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,CHLOR,sample,1,14,filtered,2022-10-04 SFRA/CHLOR 1 DOC,TDN,337.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,CHLOR,sample,2,14,filtered,2022-10-04 SFRA/CHLOR 2 DOC,TDN,339.5,mg N / L,TAIL,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,CHLOR,sample,3,14,filtered,2022-10-04 SFRA/CHLOR 3 DOC,TDN,334.2,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,ES,sample,1,14,filtered,2022-10-04 SFRA/ES 1 DOC,TDN,323.2,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,ES,sample,2,14,filtered,2022-10-04 SFRA/ES 2 DOC,TDN,325.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,ES,sample,3,14,filtered,2022-10-04 SFRA/ES 3 DOC,TDN,318.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,SRFA,sample,1,14,filtered,2022-10-04 SFRA/SFRA 1 DOC,TDN,320.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,SRFA,sample,2,14,filtered,2022-10-04 SFRA/SFRA 2 DOC,TDN,321,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
-2022-10-04,DOM Crossing Experiment 2,SRFA,SRFA,sample,3,14,filtered,2022-10-04 SFRA/SFRA 3 DOC,TDN,317.2,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,NA,0,filtered,2022-09-06 CHLOR/CHLOR T0 DOC,DOC,17.8,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CHLOR,ES,sample,NA,0,filtered,2022-09-06 CHLOR/ES T0 DOC,DOC,16.48,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,NA,0,filtered,2022-09-06 CHLOR/SFRA T0 DOC,DOC,17.04,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CTRL,CHLOR,sample,NA,0,filtered,2022-09-06 CTRL/CHLOR T0 DOC,DOC,20.43,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CTRL,ES,sample,NA,0,filtered,2022-09-06 CTRL/ES T0 DOC,DOC,18.73,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CTRL,SRFA,sample,NA,0,filtered,2022-09-06 CTRL/SFRA T0 DOC,DOC,19.44,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,ES,CHLOR,sample,NA,0,filtered,2022-09-06 ES/CHLOR T0 DOC,DOC,19.72,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,ES,ES,sample,NA,0,filtered,2022-09-06 ES/ES T0 DOC,DOC,18.68,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,ES,SRFA,sample,NA,0,filtered,2022-09-06 ES/SFRA T0 DOC,DOC,NA,mg C / L,"This sample didn't have enough volume to be analyzed - it was included in the run but no peaks were generated, so values omitted here",AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,FILTER BLANK,FILTER BLANK,filter blank,NA,0,filtered,2022-09-06 FILTER BLANK T0 DOC,DOC,<LOD,mg C / L,<LOD,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,NA,0,filtered,2022-09-06 SFRA/CHLOR T0 DOC,DOC,23.12,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,SRFA,ES,sample,NA,0,filtered,2022-09-06 SFRA/ES T0 DOC,DOC,20.4,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,NA,0,filtered,2022-09-06 SFRA/SFRA T0 DOC,DOC,20.85,mg C / L,NA,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,NA,0,filtered,2022-09-06 CHLOR/CHLOR T0 DOC,TDN,296.8,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CHLOR,ES,sample,NA,0,filtered,2022-09-06 CHLOR/ES T0 DOC,TDN,311.6,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,NA,0,filtered,2022-09-06 CHLOR/SFRA T0 DOC,TDN,317.3,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CTRL,CHLOR,sample,NA,0,filtered,2022-09-06 CTRL/CHLOR T0 DOC,TDN,310.4,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CTRL,ES,sample,NA,0,filtered,2022-09-06 CTRL/ES T0 DOC,TDN,308.9,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,CTRL,SRFA,sample,NA,0,filtered,2022-09-06 CTRL/SFRA T0 DOC,TDN,295.4,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,ES,CHLOR,sample,NA,0,filtered,2022-09-06 ES/CHLOR T0 DOC,TDN,305.1,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,ES,ES,sample,NA,0,filtered,2022-09-06 ES/ES T0 DOC,TDN,315.2,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,ES,SRFA,sample,NA,0,filtered,2022-09-06 ES/SFRA T0 DOC,TDN,NA,mg N / L,"This sample didn't have enough volume to be analyzed - it was included in the run but no peaks were generated, so values omitted here",AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,FILTER BLANK,FILTER BLANK,filter blank,NA,0,filtered,2022-09-06 FILTER BLANK T0 DOC,TDN,<LOD,mg N / L,<LOD,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,NA,0,filtered,2022-09-06 SFRA/CHLOR T0 DOC,TDN,288,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,SRFA,ES,sample,NA,0,filtered,2022-09-06 SFRA/ES T0 DOC,TDN,308.3,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,NA,0,filtered,2022-09-06 SFRA/SFRA T0 DOC,TDN,300.4,mg N / L,TAIL,AQUA_data_2022-028_Marcarelli_2022-09-21_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,1,14,filtered,2022-09-20 CHLOR/CHLOR 1 DOC,DOC,2.925,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,2,14,filtered,2022-09-20 CHLOR/CHLOR 2 DOC,DOC,2.752,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,3,14,filtered,2022-09-20 CHLOR/CHLOR 3 DOC,DOC,2.784,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,1,14,filtered,2022-09-20 CHLOR/ES 1 DOC,DOC,8.18,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,2,14,filtered,2022-09-20 CHLOR/ES 2 DOC,DOC,8.199,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,3,14,filtered,2022-09-20 CHLOR/ES 3 DOC,DOC,11.04,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,1,14,filtered,2022-09-20 CHLOR/SFRA 1 DOC,DOC,17.56,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,2,14,filtered,2022-09-20 CHLOR/SFRA 2 DOC,DOC,17.8,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,3,14,filtered,2022-09-20 CHLOR/SFRA 3 DOC,DOC,17.97,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CTRL,CHLOR,sample,1,14,filtered,2022-09-20 CTRL/CHLOR 1 DOC,DOC,8.322,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CTRL,ES,sample,1,14,filtered,2022-09-20 CTRL/ES 1 DOC,DOC,14.29,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CTRL,SRFA,sample,1,14,filtered,2022-09-20 CTRL/SFRA 1 DOC,DOC,20.6,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,1,14,filtered,2022-09-20 ES/CHLOR 1 DOC,DOC,3.801,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,2,14,filtered,2022-09-20 ES/CHLOR 2 DOC,DOC,3.647,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,3,14,filtered,2022-09-20 ES/CHLOR 3 DOC,DOC,4.027,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,1,14,filtered,2022-09-20 ES/ES 1 DOC,DOC,9.116,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,2,14,filtered,2022-09-20 ES/ES 2 DOC,DOC,8.883,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,3,14,filtered,2022-09-20 ES/ES 3 DOC,DOC,11.72,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,1,14,filtered,2022-09-20 ES/SFRA 1 DOC,DOC,17.91,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,2,14,filtered,2022-09-20 ES/SFRA 2 DOC,DOC,18.58,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,3,14,filtered,2022-09-20 ES/SFRA 3 DOC,DOC,19.64,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,1,14,filtered,2022-09-20 SFRA/CHLOR 1 DOC,DOC,7.859,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,2,14,filtered,2022-09-20 SFRA/CHLOR 2 DOC,DOC,7.132,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,3,14,filtered,2022-09-20 SFRA/CHLOR 3 DOC,DOC,7.338,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,1,14,filtered,2022-09-20 SFRA/ES 1 DOC,DOC,14.19,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,2,14,filtered,2022-09-20 SFRA/ES 2 DOC,DOC,17.4,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,3,14,filtered,2022-09-20 SFRA/ES 3 DOC,DOC,13.7,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,1,14,filtered,2022-09-20 SFRA/SFRA 1 DOC,DOC,21.58,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,2,14,filtered,2022-09-20 SFRA/SFRA 2 DOC,DOC,21.68,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,3,14,filtered,2022-09-20 SFRA/SFRA 3 DOC,DOC,21.7,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,1,14,filtered,2022-09-20 CHLOR/CHLOR 1 DOC,TDN,347.9,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,2,14,filtered,2022-09-20 CHLOR/CHLOR 2 DOC,TDN,348.7,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,3,14,filtered,2022-09-20 CHLOR/CHLOR 3 DOC,TDN,352.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,1,14,filtered,2022-09-20 CHLOR/ES 1 DOC,TDN,319.6,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,2,14,filtered,2022-09-20 CHLOR/ES 2 DOC,TDN,329.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,3,14,filtered,2022-09-20 CHLOR/ES 3 DOC,TDN,324.9,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,1,14,filtered,2022-09-20 CHLOR/SFRA 1 DOC,TDN,336.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,2,14,filtered,2022-09-20 CHLOR/SFRA 2 DOC,TDN,337.9,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,3,14,filtered,2022-09-20 CHLOR/SFRA 3 DOC,TDN,337.4,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CTRL,CHLOR,sample,1,14,filtered,2022-09-20 CTRL/CHLOR 1 DOC,TDN,358.7,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CTRL,ES,sample,1,14,filtered,2022-09-20 CTRL/ES 1 DOC,TDN,326.4,mg N / L,TAIL,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,CTRL,SRFA,sample,1,14,filtered,2022-09-20 CTRL/SFRA 1 DOC,TDN,333.1,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,1,14,filtered,2022-09-20 ES/CHLOR 1 DOC,TDN,340.4,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,2,14,filtered,2022-09-20 ES/CHLOR 2 DOC,TDN,335.5,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,3,14,filtered,2022-09-20 ES/CHLOR 3 DOC,TDN,334.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,1,14,filtered,2022-09-20 ES/ES 1 DOC,TDN,325.8,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,2,14,filtered,2022-09-20 ES/ES 2 DOC,TDN,329.2,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,3,14,filtered,2022-09-20 ES/ES 3 DOC,TDN,313.1,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,1,14,filtered,2022-09-20 ES/SFRA 1 DOC,TDN,309.2,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,2,14,filtered,2022-09-20 ES/SFRA 2 DOC,TDN,323.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,3,14,filtered,2022-09-20 ES/SFRA 3 DOC,TDN,328,mg N / L,TAIL,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,1,14,filtered,2022-09-20 SFRA/CHLOR 1 DOC,TDN,352.3,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,2,14,filtered,2022-09-20 SFRA/CHLOR 2 DOC,TDN,352.2,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,3,14,filtered,2022-09-20 SFRA/CHLOR 3 DOC,TDN,344,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,1,14,filtered,2022-09-20 SFRA/ES 1 DOC,TDN,327.2,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,2,14,filtered,2022-09-20 SFRA/ES 2 DOC,TDN,327.9,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,3,14,filtered,2022-09-20 SFRA/ES 3 DOC,TDN,338.2,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,1,14,filtered,2022-09-20 SFRA/SFRA 1 DOC,TDN,317,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,2,14,filtered,2022-09-20 SFRA/SFRA 2 DOC,TDN,335.7,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,3,14,filtered,2022-09-20 SFRA/SFRA 3 DOC,TDN,337.7,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,NA,0,filtered,2022-09-20 CHLOR/CHLOR T0 DOC,DOC,12.87,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CHLOR,ES,sample,NA,0,filtered,2022-09-20 CHLOR/ES T0 DOC,DOC,16.04,mg C / L,"Note on bottle: ""THIS SAMPLE MAY BE ES/CHLOR""",AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,NA,0,filtered,2022-09-20 CHLOR/SFRA T0 DOC,DOC,18.08,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CTRL,CHLOR,sample,NA,0,filtered,2022-09-20 CTRL/CHLOR T0 DOC,DOC,14.98,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CTRL,ES,sample,NA,0,filtered,2022-09-20 CTRL/ES T0 DOC,DOC,19.99,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CTRL,SRFA,sample,NA,0,filtered,2022-09-20 CTRL/SFRA T0 DOC,DOC,21.32,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,ES,CHLOR,sample,NA,0,filtered,2022-09-20 ES/CHLOR T0 DOC,DOC,12.67,mg C / L,"Note on bottle: ""THIS SAMPLE MAY BE CHLOR/ES""",AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,ES,ES,sample,NA,0,filtered,2022-09-20 ES/ES T0 DOC,DOC,17.59,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,ES,SRFA,sample,NA,0,filtered,2022-09-20 ES/SFRA T0 DOC,DOC,18.6,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,FILTER BLANK,FILTER BLANK,filter blank,NA,0,filtered,2022-09-20 FILTER BLANK T0 DOC,DOC,4.402,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,NA,0,filtered,2022-09-20 SFRA/CHLOR T0 DOC,DOC,14.65,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,SRFA,ES,sample,NA,0,filtered,2022-09-20 SFRA/ES T0 DOC,DOC,18.25,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,NA,0,filtered,2022-09-20 SFRA/SFRA T0 DOC,DOC,19.61,mg C / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,NA,0,filtered,2022-09-20 CHLOR/CHLOR T0 DOC,TDN,328,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CHLOR,ES,sample,NA,0,filtered,2022-09-20 CHLOR/ES T0 DOC,TDN,325.6,mg N / L,"Note on bottle: ""THIS SAMPLE MAY BE ES/CHLOR""",AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,NA,0,filtered,2022-09-20 CHLOR/SFRA T0 DOC,TDN,324,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CTRL,CHLOR,sample,NA,0,filtered,2022-09-20 CTRL/CHLOR T0 DOC,TDN,332.9,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CTRL,ES,sample,NA,0,filtered,2022-09-20 CTRL/ES T0 DOC,TDN,323.5,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,CTRL,SRFA,sample,NA,0,filtered,2022-09-20 CTRL/SFRA T0 DOC,TDN,330.6,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,ES,CHLOR,sample,NA,0,filtered,2022-09-20 ES/CHLOR T0 DOC,TDN,325.8,mg N / L,"Note on bottle: ""THIS SAMPLE MAY BE CHLOR/ES""",AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,ES,ES,sample,NA,0,filtered,2022-09-20 ES/ES T0 DOC,TDN,327.1,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,ES,SRFA,sample,NA,0,filtered,2022-09-20 ES/SFRA T0 DOC,TDN,325.7,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,FILTER BLANK,FILTER BLANK,filter blank,NA,0,filtered,2022-09-20 FILTER BLANK T0 DOC,TDN,<LOD,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,NA,0,filtered,2022-09-20 SFRA/CHLOR T0 DOC,TDN,329.8,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,SRFA,ES,sample,NA,0,filtered,2022-09-20 SFRA/ES T0 DOC,TDN,326.1,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+9/20/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,NA,0,filtered,2022-09-20 SFRA/SFRA T0 DOC,TDN,329.4,mg N / L,NA,AQUA_data_2022-031_Marcarelli_2022-09-30_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,1,14,filtered,2022-10-04 CHLOR/CHLOR 1 DOC,DOC,2.819,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,2,14,filtered,2022-10-04 CHLOR/CHLOR 2 DOC,DOC,2.97,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,3,14,filtered,2022-10-04 CHLOR/CHLOR 3 DOC,DOC,2.834,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,1,14,filtered,2022-10-04 CHLOR/ES 1 DOC,DOC,8.485,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,2,14,filtered,2022-10-04 CHLOR/ES 2 DOC,DOC,8.341,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,3,14,filtered,2022-10-04 CHLOR/ES 3 DOC,DOC,8.122,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,1,14,filtered,2022-10-04 CHLOR/SFRA 1 DOC,DOC,17.78,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,2,14,filtered,2022-10-04 CHLOR/SFRA 2 DOC,DOC,17.37,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,3,14,filtered,2022-10-04 CHLOR/SFRA 3 DOC,DOC,17.72,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CTRL,CHLOR,sample,1,14,filtered,2022-10-04 CTRL/CHLOR 1 DOC,DOC,5.303,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CTRL,ES,sample,1,14,filtered,2022-10-04 CTRL/ES 1 DOC,DOC,12.71,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CTRL,SRFA,sample,1,14,filtered,2022-10-04 CTRL/SFRA 1 DOC,DOC,21.86,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,1,14,filtered,2022-10-04 ES/CHLOR 1 DOC,DOC,5.219,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,2,14,filtered,2022-10-04 ES/CHLOR 2 DOC,DOC,3.598,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,3,14,filtered,2022-10-04 ES/CHLOR 3 DOC,DOC,3.874,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,1,14,filtered,2022-10-04 ES/ES 1 DOC,DOC,9.105,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,2,14,filtered,2022-10-04 ES/ES 2 DOC,DOC,8.676,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,3,14,filtered,2022-10-04 ES/ES 3 DOC,DOC,8.92,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,1,14,filtered,2022-10-04 ES/SFRA 1 DOC,DOC,18.75,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,2,14,filtered,2022-10-04 ES/SFRA 2 DOC,DOC,18.03,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,3,14,filtered,2022-10-04 ES/SFRA 3 DOC,DOC,18.97,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,1,14,filtered,2022-10-04 SFRA/CHLOR 1 DOC,DOC,5.654,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,2,14,filtered,2022-10-04 SFRA/CHLOR 2 DOC,DOC,5.625,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,3,14,filtered,2022-10-04 SFRA/CHLOR 3 DOC,DOC,5.7,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,1,14,filtered,2022-10-04 SFRA/ES 1 DOC,DOC,11.96,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,2,14,filtered,2022-10-04 SFRA/ES 2 DOC,DOC,13.37,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,3,14,filtered,2022-10-04 SFRA/ES 3 DOC,DOC,11.46,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,1,14,filtered,2022-10-04 SFRA/SFRA 1 DOC,DOC,20.1,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,2,14,filtered,2022-10-04 SFRA/SFRA 2 DOC,DOC,21.21,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,3,14,filtered,2022-10-04 SFRA/SFRA 3 DOC,DOC,20.84,mg C / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,1,14,filtered,2022-10-04 CHLOR/CHLOR 1 DOC,TDN,336.4,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,2,14,filtered,2022-10-04 CHLOR/CHLOR 2 DOC,TDN,337.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,3,14,filtered,2022-10-04 CHLOR/CHLOR 3 DOC,TDN,340.3,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,1,14,filtered,2022-10-04 CHLOR/ES 1 DOC,TDN,332.5,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,2,14,filtered,2022-10-04 CHLOR/ES 2 DOC,TDN,333,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,3,14,filtered,2022-10-04 CHLOR/ES 3 DOC,TDN,331.2,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,1,14,filtered,2022-10-04 CHLOR/SFRA 1 DOC,TDN,330.2,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,2,14,filtered,2022-10-04 CHLOR/SFRA 2 DOC,TDN,329.4,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,3,14,filtered,2022-10-04 CHLOR/SFRA 3 DOC,TDN,328.4,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CTRL,CHLOR,sample,1,14,filtered,2022-10-04 CTRL/CHLOR 1 DOC,TDN,339.4,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CTRL,ES,sample,1,14,filtered,2022-10-04 CTRL/ES 1 DOC,TDN,331.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,CTRL,SRFA,sample,1,14,filtered,2022-10-04 CTRL/SFRA 1 DOC,TDN,330.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,1,14,filtered,2022-10-04 ES/CHLOR 1 DOC,TDN,325.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,2,14,filtered,2022-10-04 ES/CHLOR 2 DOC,TDN,324.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,3,14,filtered,2022-10-04 ES/CHLOR 3 DOC,TDN,322.4,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,1,14,filtered,2022-10-04 ES/ES 1 DOC,TDN,312.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,2,14,filtered,2022-10-04 ES/ES 2 DOC,TDN,316.8,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,3,14,filtered,2022-10-04 ES/ES 3 DOC,TDN,316.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,1,14,filtered,2022-10-04 ES/SFRA 1 DOC,TDN,314.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,2,14,filtered,2022-10-04 ES/SFRA 2 DOC,TDN,319.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,3,14,filtered,2022-10-04 ES/SFRA 3 DOC,TDN,319.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,1,14,filtered,2022-10-04 SFRA/CHLOR 1 DOC,TDN,337.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,2,14,filtered,2022-10-04 SFRA/CHLOR 2 DOC,TDN,339.5,mg N / L,TAIL,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,3,14,filtered,2022-10-04 SFRA/CHLOR 3 DOC,TDN,334.2,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,1,14,filtered,2022-10-04 SFRA/ES 1 DOC,TDN,323.2,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,2,14,filtered,2022-10-04 SFRA/ES 2 DOC,TDN,325.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,3,14,filtered,2022-10-04 SFRA/ES 3 DOC,TDN,318.6,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,1,14,filtered,2022-10-04 SFRA/SFRA 1 DOC,TDN,320.1,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,2,14,filtered,2022-10-04 SFRA/SFRA 2 DOC,TDN,321,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,3,14,filtered,2022-10-04 SFRA/SFRA 3 DOC,TDN,317.2,mg N / L,NA,AQUA_data_2022-032_Marcarelli_2022-10-11_TOC+TN.xlsx
+9/6/22,DOM Crossing Experiment 1,SRFA,ES,sample,,0,filtered,1281,SRP,279.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,,0,filtered,1982,SRP,271.8,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,,0,filtered,1782,SRP,283,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,ES,CHLOR,sample,,0,filtered,7360,SRP,261,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,ES,SRFA,sample,,0,filtered,7365,SRP,244.9,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,ES,ES,sample,,0,filtered,8468,SRP,272.8,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,FILTER BLANK,FILTER BLANK,filter blank,,0,filtered,8362,SRP,-1.8,mg P / L,<LOD,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CTRL,ES,sample,,0,filtered,8262,SRP,257.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,,0,filtered,8189,SRP,260.9,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CHLOR,ES,sample,,0,filtered,8558,SRP,274.3,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,,0,filtered,8457,SRP,278.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CTRL,CHLOR,sample,,0,filtered,8572,SRP,273.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CTRL,SRFA,sample,,0,filtered,8335,SRP,252.9,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,2,14,filtered,261,SRP,262.3,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,2,14,filtered,1004,SRP,290.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,2,14,filtered,1060,SRP,280.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,3,14,filtered,1187,SRP,269.5,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,3,14,filtered,1609,SRP,258.9,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CTRL,SRFA,sample,1,14,filtered,1645,SRP,254.3,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,1,14,filtered,1672,SRP,163.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,1,14,filtered,1756,SRP,287.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,1,14,filtered,1779,SRP,271.5,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,1,14,filtered,1794,SRP,248,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,1,14,filtered,7044,SRP,247,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,3,14,filtered,7081,SRP,270.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,3,14,filtered,7214,SRP,274.4,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,1,14,filtered,7233,SRP,277.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,3,14,filtered,7245,SRP,270.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,2,14,filtered,7319,SRP,272,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,3,14,filtered,7655,SRP,176.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CTRL,ES,sample,1,14,filtered,7693,SRP,254.7,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,2,14,filtered,7714,SRP,272.5,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,1,14,filtered,7793,SRP,247,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,2,14,filtered,8110,SRP,264.5,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,1,14,filtered,8155,SRP,272.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,2,14,filtered,8191,SRP,281.8,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,3,14,filtered,8279,SRP,276.9,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,3,14,filtered,8296,SRP,278.4,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,2,14,filtered,8293,SRP,266.4,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,3,14,filtered,8642,SRP,184.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,1,14,filtered,8731,SRP,278.9,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,,0,filtered,576,SRP,254.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,SRFA,sample,1,14,filtered,1179,SRP,242.9,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CHLOR,ES,sample,,0,filtered,1241,SRP,261.5,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,ES,CHLOR,sample,,0,filtered,1477,SRP,263.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,ES,ES,sample,,0,filtered,1573,SRP,255.7,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,,0,filtered,1675,SRP,271.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,,0,filtered,1764,SRP,252.4,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CTRL,CHLOR,sample,,0,filtered,1996,SRP,253.8,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,ES,SRFA,sample,,0,filtered,7228,SRP,256,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,SRFA,ES,sample,,0,filtered,8000,SRP,249.8,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,ES,sample,1,14,filtered,8632,SRP,255,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,,0,filtered,8740,SRP,246,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,1,14,filtered,1348,SRP,258.8,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,3,14,filtered,1804,SRP,268.7,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,2,14,filtered,1269,SRP,261.8,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,ES,sample,1,14,filtered,1770,SRP,252.1,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,2,14,filtered,1186,SRP,270.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,1,14,filtered,1340,SRP,255.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,2,14,filtered,1667,SRP,264.1,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,1,14,filtered,1698,SRP,257.3,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,1,14,filtered,1784,SRP,258.5,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,SRFA,sample,1,14,filtered,1994,SRP,259.5,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,1,14,filtered,7128,SRP,268.8,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,3,14,filtered,7259,SRP,269.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,1,14,filtered,7522,SRP,258.3,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,2,14,filtered,7445,SRP,-12.4,mg P / L,<LOD,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,2,14,filtered,7628,SRP,260.6,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,2,14,filtered,7152,SRP,256.8,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,3,14,filtered,7630,SRP,253.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,3,14,filtered,7262,SRP,255.4,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,3,14,filtered,7646,SRP,255.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,2,14,filtered,7828,SRP,260,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,1,14,filtered,8654,SRP,258.3,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,1,14,filtered,8715,SRP,265.7,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,3,14,filtered,8693,SRP,263.4,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,2,14,filtered,8826,SRP,-11.4,mg P / L,<LOD,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,2,14,filtered,8615,SRP,261.5,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,3,14,filtered,8636,SRP,256.1,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,CHLOR,sample,1,14,filtered,7848,SRP,259.8,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,1,14,filtered,8742,SRP,261.9,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,3,14,filtered,1932,SRP,256.1,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,3,14,filtered,1197,SRP,259.2,mg P / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,SRFA,ES,sample,,0,filtered,1281,NH4,147.9,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,,0,filtered,1982,NH4,149.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,,0,filtered,1782,NH4,156.7,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,ES,CHLOR,sample,,0,filtered,7360,NH4,142.8,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,ES,SRFA,sample,,0,filtered,7365,NH4,131.4,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,ES,ES,sample,,0,filtered,8468,NH4,147,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,FILTER BLANK,FILTER BLANK,filter blank,,0,filtered,8362,NH4,-3.40,mg N / L,<LOD,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CTRL,ES,sample,,0,filtered,8262,NH4,140.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,,0,filtered,8189,NH4,137.7,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CHLOR,ES,sample,,0,filtered,8558,NH4,149.2,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,,0,filtered,8457,NH4,147,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CTRL,CHLOR,sample,,0,filtered,8572,NH4,151.9,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CTRL,SRFA,sample,,0,filtered,8335,NH4,136.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,2,14,filtered,261,NH4,96.9,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,2,14,filtered,1004,NH4,134.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,2,14,filtered,1060,NH4,99.5,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,3,14,filtered,1187,NH4,98.5,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,3,14,filtered,1609,NH4,85.9,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CTRL,SRFA,sample,1,14,filtered,1645,NH4,137.7,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,1,14,filtered,1672,NH4,93.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,1,14,filtered,1756,NH4,129.4,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,1,14,filtered,1779,NH4,212.10,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,1,14,filtered,1794,NH4,161.30,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,1,14,filtered,7044,NH4,209.00,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,3,14,filtered,7081,NH4,95.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,3,14,filtered,7214,NH4,96.9,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,1,14,filtered,7233,NH4,100.9,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,3,14,filtered,7245,NH4,111.2,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,2,14,filtered,7319,NH4,99.1,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,3,14,filtered,7655,NH4,131.1,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CTRL,ES,sample,1,14,filtered,7693,NH4,136.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,2,14,filtered,7714,NH4,97.2,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,1,14,filtered,7793,NH4,92.7,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,2,14,filtered,8110,NH4,127.9,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,1,14,filtered,8155,NH4,91.4,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,2,14,filtered,8191,NH4,99.3,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,3,14,filtered,8279,NH4,102.4,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,3,14,filtered,8296,NH4,96.1,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,2,14,filtered,8293,NH4,122.3,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,3,14,filtered,8642,NH4,132.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,1,14,filtered,8731,NH4,132.9,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,,0,filtered,576,NH4,133.1,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,SRFA,sample,1,14,filtered,1179,NH4,125.3,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CHLOR,ES,sample,,0,filtered,1241,NH4,135.8,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,ES,CHLOR,sample,,0,filtered,1477,NH4,134.3,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,ES,ES,sample,,0,filtered,1573,NH4,132.4,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,,0,filtered,1675,NH4,140.7,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,,0,filtered,1764,NH4,133.2,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CTRL,CHLOR,sample,,0,filtered,1996,NH4,140,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,ES,SRFA,sample,,0,filtered,7228,NH4,134.1,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,SRFA,ES,sample,,0,filtered,8000,NH4,133.1,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,ES,sample,1,14,filtered,8632,NH4,138.1,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,,0,filtered,8740,NH4,132.4,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,1,14,filtered,1348,NH4,98.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,3,14,filtered,1804,NH4,102.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,2,14,filtered,1269,NH4,135.4,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,ES,sample,1,14,filtered,1770,NH4,133.8,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,2,14,filtered,1186,NH4,99.9,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,1,14,filtered,1340,NH4,90.2,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,2,14,filtered,1667,NH4,88.2,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,1,14,filtered,1698,NH4,104.8,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,1,14,filtered,1784,NH4,95.4,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,SRFA,sample,1,14,filtered,1994,NH4,138.5,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,1,14,filtered,7128,NH4,105,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,3,14,filtered,7259,NH4,139.7,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,1,14,filtered,7522,NH4,141.8,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,2,14,filtered,7445,NH4,101.2,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,2,14,filtered,7628,NH4,100.7,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,2,14,filtered,7152,NH4,107.3,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,3,14,filtered,7630,NH4,129.2,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,3,14,filtered,7262,NH4,94.7,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,3,14,filtered,7646,NH4,136.8,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,2,14,filtered,7828,NH4,137.3,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,1,14,filtered,8654,NH4,100.8,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,1,14,filtered,8715,NH4,136.4,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,3,14,filtered,8693,NH4,104,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,2,14,filtered,8826,NH4,137.3,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,2,14,filtered,8615,NH4,93.2,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,3,14,filtered,8636,NH4,97.8,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,CHLOR,sample,1,14,filtered,7848,NH4,140.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,1,14,filtered,8742,NH4,139.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,3,14,filtered,1932,NH4,94.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,3,14,filtered,1197,NH4,103.6,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,SRFA,ES,sample,,0,filtered,1281,NO3NO2,163,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,,0,filtered,1982,NO3NO2,154,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,,0,filtered,1782,NO3NO2,164,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,ES,CHLOR,sample,,0,filtered,7360,NO3NO2,154,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,ES,SRFA,sample,,0,filtered,7365,NO3NO2,158,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,ES,ES,sample,,0,filtered,8468,NO3NO2,162,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,FILTER BLANK,FILTER BLANK,filter blank,,0,filtered,8362,NO3NO2,2,mg N / L,<LOD,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CTRL,ES,sample,,0,filtered,8262,NO3NO2,152,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,,0,filtered,8189,NO3NO2,149,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CHLOR,ES,sample,,0,filtered,8558,NO3NO2,147,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,,0,filtered,8457,NO3NO2,139,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CTRL,CHLOR,sample,,0,filtered,8572,NO3NO2,144,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/6/22,DOM Crossing Experiment 1,CTRL,SRFA,sample,,0,filtered,8335,NO3NO2,130,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,2,14,filtered,261,NO3NO2,170,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,2,14,filtered,1004,NO3NO2,173,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,2,14,filtered,1060,NO3NO2,211,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,3,14,filtered,1187,NO3NO2,206,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,3,14,filtered,1609,NO3NO2,166,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CTRL,SRFA,sample,1,14,filtered,1645,NO3NO2,155,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,ES,sample,1,14,filtered,1672,NO3NO2,212,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,1,14,filtered,1756,NO3NO2,184,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,1,14,filtered,1779,NO3NO2,293.0,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,1,14,filtered,1794,NO3NO2,298.0,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,1,14,filtered,7044,NO3NO2,369.0,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,SRFA,sample,3,14,filtered,7081,NO3NO2,192,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,3,14,filtered,7214,NO3NO2,154,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,1,14,filtered,7233,NO3NO2,202,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,3,14,filtered,7245,NO3NO2,150,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,2,14,filtered,7319,NO3NO2,159,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,CHLOR,sample,3,14,filtered,7655,NO3NO2,156,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CTRL,ES,sample,1,14,filtered,7693,NO3NO2,142,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,2,14,filtered,7714,NO3NO2,182,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,SRFA,sample,1,14,filtered,7793,NO3NO2,167,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,2,14,filtered,8110,NO3NO2,163,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,ES,sample,1,14,filtered,8155,NO3NO2,185,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,2,14,filtered,8191,NO3NO2,223,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,SRFA,CHLOR,sample,3,14,filtered,8279,NO3NO2,221,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,ES,CHLOR,sample,3,14,filtered,8296,NO3NO2,175,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,ES,sample,2,14,filtered,8293,NO3NO2,158,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,3,14,filtered,8642,NO3NO2,149,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 1,CHLOR,SRFA,sample,1,14,filtered,8731,NO3NO2,149,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,,0,filtered,576,NO3NO2,128,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,SRFA,sample,1,14,filtered,1179,NO3NO2,123,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CHLOR,ES,sample,,0,filtered,1241,NO3NO2,135,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,ES,CHLOR,sample,,0,filtered,1477,NO3NO2,137,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,ES,ES,sample,,0,filtered,1573,NO3NO2,130,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,,0,filtered,1675,NO3NO2,134,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,,0,filtered,1764,NO3NO2,123,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CTRL,CHLOR,sample,,0,filtered,1996,NO3NO2,121,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,ES,SRFA,sample,,0,filtered,7228,NO3NO2,127,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,SRFA,ES,sample,,0,filtered,8000,NO3NO2,136,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,ES,sample,1,14,filtered,8632,NO3NO2,129,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+9/20/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,,0,filtered,8740,NO3NO2,131,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,1,14,filtered,1348,NO3NO2,183,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,3,14,filtered,1804,NO3NO2,174,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,2,14,filtered,1269,NO3NO2,145,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,ES,sample,1,14,filtered,1770,NO3NO2,135,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,2,14,filtered,1186,NO3NO2,167,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,1,14,filtered,1340,NO3NO2,151,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,2,14,filtered,1667,NO3NO2,150,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,1,14,filtered,1698,NO3NO2,137,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,1,14,filtered,1784,NO3NO2,169,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,SRFA,sample,1,14,filtered,1994,NO3NO2,117,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,1,14,filtered,7128,NO3NO2,171,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,3,14,filtered,7259,NO3NO2,132,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,1,14,filtered,7522,NO3NO2,132,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,2,14,filtered,7445,NO3NO2,186,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,2,14,filtered,7628,NO3NO2,177,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,2,14,filtered,7152,NO3NO2,170,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,3,14,filtered,7630,NO3NO2,137,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,ES,sample,3,14,filtered,7262,NO3NO2,193,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,3,14,filtered,7646,NO3NO2,144,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,2,14,filtered,7828,NO3NO2,132,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,1,14,filtered,8654,NO3NO2,155,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,SRFA,sample,1,14,filtered,8715,NO3NO2,130,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,CHLOR,sample,3,14,filtered,8693,NO3NO2,163,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,CHLOR,sample,2,14,filtered,8826,NO3NO2,138,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,SRFA,sample,2,14,filtered,8615,NO3NO2,139,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,ES,ES,sample,3,14,filtered,8636,NO3NO2,157,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CTRL,CHLOR,sample,1,14,filtered,7848,NO3NO2,126,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,CHLOR,ES,sample,1,14,filtered,8742,NO3NO2,132,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,SRFA,sample,3,14,filtered,1932,NO3NO2,181,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
+10/4/22,DOM Crossing Experiment 2,SRFA,CHLOR,sample,3,14,filtered,1197,NO3NO2,182,mg N / L,NA,"AQUA data_2024-005_Marcarelli_2024-05-17_SRP, NO3+NO2, NH4 COMPLETE"
