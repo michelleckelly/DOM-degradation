@@ -2517,17 +2517,23 @@ knitr::include_graphics("images/Figure_S1.png")
 
 ## Figure S2
 ```{r FigS2, fig.width=4, fig.height=5}
+deltaDOC %>%
+  select(Experiment, Enrichment, DOMSource, Replicate, deltaDOC_mgCL, deltaCO2_mgCL) %>%
+  distinct()
+
 # Rename "CTRL"
 deltaDOC$Enrichment <- plyr::revalue(deltaDOC$Enrichment, 
                                      c("CTRL microbes" = "Reference"))
 
 ggplot(data = deltaDOC, 
-       aes(x = DOMSource, y = deltaDOC_mgCL)) +
+       #aes(x = DOMSource, y = deltaDOC_mgCL)
+       aes(y = deltaCO2_mgCL, x = deltaDOC_mgCL)
+       ) +
   # Overlay points
   geom_jitter(aes(shape = Enrichment, color = DOMSource), 
-              size = 2.5, width = 0.25, alpha = 0.5) +
-  stat_summary(aes(fill = DOMSource), geom = "pointrange", fun.data = mean_se,
-               size = 0.75, shape = 23) +
+              size = 3, width = 0.25, alpha = 0.95) +
+  #stat_summary(aes(fill = DOMSource), geom = "pointrange", fun.data = mean_se,
+   #            size = 0.75, shape = 23) +
   scale_color_manual(values = c("CHLOR" = "#D84727", "ES" = "#FFB000",
                                "SRFA"="#2E4756"), 
                     guide = "none") +
@@ -2535,17 +2541,19 @@ ggplot(data = deltaDOC,
                                "SRFA"="#2E4756"), 
                     guide = "none") +
   # Theme adjustments
-  theme_minimal() + labs(tag = "a") +
-  xlab("DOM source") + ylab(expression(Delta*"DOC (mg-C"~L^{-1}*")")) +
+  theme_minimal() + #labs(tag = "a") +
+  scale_x_reverse() +
+  ylab(expression(Delta*"DIC (mg-C"~L^{-1}*")")) +
+  xlab(expression(Delta*"DOC (mg-C"~L^{-1}*")")) +
   scale_shape_manual(values = c(c(3, 16, 17, 15))) +
   guides(shape = guide_legend(theme = theme(legend.title = 
                                               element_text(hjust = 0.5)))) +
   theme(axis.text = element_text(color = "black", size = 10),
-        legend.key.size = unit(0.3, "cm"),
+        legend.key.size = unit(0.5, "cm"),
         legend.title = element_text(size = 10),
         strip.text = element_text(size = 10),
         legend.text = element_text(size = 8),
-        legend.position = c(0.75,0.9), 
+        legend.position = c(0.2,0.8), 
         legend.direction = "vertical",
         legend.justification = c(0.5,0.5),
         plot.background = element_rect(fill = "white", color = NA))
